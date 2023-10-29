@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "csso": "^5.0.5",
+    "js-beautify": "^1.14.9",
+    "jsx-transform": "^2.4.1",
+    "void-elements": "^3.1.0"
+  }
+}

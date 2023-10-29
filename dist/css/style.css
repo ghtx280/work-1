@@ -1,0 +1,150 @@
+:root {
+    --font-main: Poppins, system-ui, sans-serif;
+    --font-lilita: "Lilita One", system-ui, sans-serif;
+    --color-yellow: #FFB703;
+    --color-pink: #BC54A1;
+    --color-black: #16252E;
+    --color-red: #EE1B25;
+    --color-blue: #1771BA
+}
+
+.nav_active {
+    color: var(--color-red)
+}
+
+body * {
+    color: var(--color-black);
+    font-family: var(--font-main);
+    font-weight: 500
+}
+
+a,
+button,
+div,
+input,
+p,
+select,
+span,
+textarea {
+    font-size: 15px
+}
+
+.font_lilita {
+    font-family: var(--font-lilita)
+}
+
+.hero_h1 {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    font-size: 70px
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.block_latest_blog,
+.block_latest_video {
+    position: relative
+}
+
+.block_latest_video::before {
+    left: -100px;
+    background-image: url(../img/LeftGraphicsLong.svg);
+    background-position: right top
+}
+
+.block_latest_video::after,
+.block_latest_video::before {
+    content: "";
+    width: 400px;
+    height: 900px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    z-index: -1;
+    margin-top: 85px
+}
+
+.block_latest_blog::before {
+    left: -100px;
+    background-position: right top
+}
+
+.block_latest_blog::after,
+.block_latest_blog::before {
+    content: "";
+    width: 400px;
+    height: 900px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    z-index: -1;
+    margin-top: 85px
+}
+
+.block_latest_video::after {
+    background-image: url(../img/RightGraphicsLong.svg)
+}
+
+.block_latest_blog::after,
+.block_latest_video::after {
+    right: -100px;
+    left: unset;
+    background-position: left top
+}
+
+.block_latest_blog::before {
+    background-image: url(../img/RightGraphicsLong.svg);
+    transform: scaleX(-1)
+}
+
+.block_latest_blog::after {
+    background-image: url(../img/LeftGraphicsLong.svg);
+    transform: scaleX(-1)
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-family: var(--font-lilita);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25)
+}
+
+.btn_yellow {
+    background: var(--color-yellow)
+}
+
+.btn_pink {
+    background: var(--color-pink);
+    color: #fff
+}
+
+.clouds,
+header {
+    background-image: url(../img/clouds.jpg)
+}
+
+header.index_header {
+    background-position: bottom center;
+    background-size: 110% 100%
+}
+
+.block_promo,
+footer {
+    background-position: top;
+    background-size: 140% 300%
+}
+
+.blog_item {
+    box-shadow: 0 6px 20px rgba(160, 180, 200, .4)
+}
