@@ -1,15 +1,51 @@
 (function () {
+
+  <style jsx>{`
+    .hero_title {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-size: 70px;
+    }
+
+    .hero_img img {
+      height: 200px;
+    }
+
+    .hero_text {
+      display: none;
+    }
+
+    .block_header {
+      height: 500px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .index_page .hero_img img {
+      height: 450px;
+    }
+
+    .index_page .hero_text {
+      display: flex;
+    }
+
+    .index_page .block_header {
+      height: 100vh;
+    }
+  `}</style>
+
   return (
-    <header class="w-full h-100vh index_header" flex="col">
+    <header className="block_header w-full" flex="col">
       <Nav />
 
-      <div class="container grow" flex="center">
+      <div className="hero_section container" flex="center grow">
         <div flex="40 space">
-          <div flex="24 col ai-s">
-            <h1 class="hero_h1 font_lilita c-f">
+
+          <div className="hero_text" flex="24 col ai-s">
+            <h1 className="hero_title font_lilita" text="white">
               Welcome to GlenBob's Toy Learning
             </h1>
-            <div className="rel">
+
+            <div className="relative">
               <p>
                 Dive into a world where toys meet education, sparking creativity
                 and learning in the young minds. Join us as we explore the
@@ -21,12 +57,16 @@
                 Every video is tailored to encourage learning, blending fun with
                 foundational knowledge essential for Pre-K and kindergarten.
               </p>
-              <YouTube h="50" class="abs bottom--70" />
+              <a href="#">
+                <YouTube h="50" class="absolute bottom--70" />
+              </a>
             </div>
           </div>
-          <div className="shrink-0">
-            <Hero h="450" />
+
+          <div className="hero_img shrink-0">
+            <Hero />
           </div>
+
         </div>
       </div>
     </header>

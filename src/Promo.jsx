@@ -4,23 +4,30 @@
   return (
     <div className="block_promo clouds py-65">
       <div className="container" flex="55">
-        <Hero class="w-490 shrink-1" />
 
-        <div className="w-1 bg-f shrink-1 grow-1"></div>
+        <div className="promo_img w-490 shrink-0">
+          <Hero />
+        </div>
 
-        <div flex="35 col ai-s">
+        <div className="promo_divider w-1 bg-white" />
+
+        <div className="promo_text" flex="35 col ai-s">
           <YouTube h="50" />
-          <h2 className="fs-54 c-f font_lilita">
+
+          <h2 className="font_lilita" text="54 white">
             Subscribe to GlenBob's Toy Learning on YouTube
           </h2>
-          <p className="fs-20 c-f">
+
+          <p text="20 white">
             Join us as we explore the adventures of Numberblocks and the magic
             of counting
           </p>
+          
           <a href="#" className="btn btn_yellow">
             Subscribe Today
           </a>
         </div>
+
       </div>
     </div>
   );

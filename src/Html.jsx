@@ -21,9 +21,10 @@
               colors: {
                 yellow: { def: "#FFB703" },
                 pink:   { def: "#BC54A1" },
-                black:  { def: "#16252E" },
                 red:    { def: "#EE1B25" },
                 blue:   { def: "#1771BA" },
+                white:  { def: "#F5F5F5" },
+                black:  { def: "#16252E" },
               }
             })
           `}</script>
@@ -35,7 +36,9 @@
             rel="stylesheet"
           />
         </head>
-        <body>{slot}</body>
+        <body className={
+          $data.page == "index" ? "index_page" : ""
+        }>{slot}</body>
       </html>
     </template>
   );

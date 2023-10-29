@@ -141,38 +141,12 @@
     ])
   );
 })(),
-      (function () {
-
+      (function() {
 
   return (
-    $el('div', {className: "block_latest_video py-85 over-x-hidden"}, [
-      $el('div', {className: "container", flex: "66 col"}, [
-        $el('h2', {className: "latest_video_title font_lilita", text: "48 $yellow center"}, [
-          "Latest Videos on YouTube"
-        ]),
+    $el('div'
 
-        $el('div', {className: "latest_video_grid", grid: "50+30 cols-3"}, [
-          times(9).map(() => (function () {
-  return (
-    $el('a', {
-      href: "#",
-      className: "card_video ratio-16/9",
-      flex: "center",
-      style: "background-image: url('./img/video.jpg')"
-    }, [
-      $el('img', {src: "./img/play.svg", alt: "Play Button"})
-    ])
-  );
-})())
-        ]),
-
-        $el('div', {className: "latest_video_btn", flex: "center"}, [
-          $el('a', {href: "#", className: "btn btn_pink my-auto"}, [
-            "Watch More Videos"
-          ])
-        ])
-      ])
-    ])
+    )
   );
 })(),
       (function () {
@@ -232,36 +206,32 @@
 
 
   return (
-    $el('div', {className: "block_latest_blog py-85 over-x-hidden"}, [
+    $el('div', {className: "block_latest_video py-85 over-x-hidden"}, [
       $el('div', {className: "container", flex: "66 col"}, [
-
-        $el('h2', {className: "latest_blog_title font_lilita", text: "48 $yellow center"}, [
-          "Latest Blog Posts"
+        $el('h2', {className: "latest_video_title font_lilita", text: "48 $yellow center"}, [
+          "Latest Videos on YouTube"
         ]),
 
-        $el('div', {className: "latest_blog_grid", grid: "50+30 cols-3"}, [
+        $el('div', {className: "latest_video_grid", grid: "50+30 cols-3"}, [
           times(9).map(() => (function () {
-  ;
-
   return (
-    $el('a', {href: "#", className: "card_blog r-16", flex: "col"}, [
-      $el('img', {className: "h-230 rt-16", src: "./img/video.jpg"}),
-
-      $el('p', {className: "p-26+32 bg-white", text: "18"}, [
-        "Improving staff productivity and turnaround with Digital Dictation and" + ' ' +
-        "Outsourced Transcription"
-      ])
+    $el('a', {
+      href: "#",
+      className: "card_video ratio-16/9",
+      flex: "center",
+      style: "background-image: url('./img/video.jpg')"
+    }, [
+      $el('img', {src: "./img/play.svg", alt: "Play Button"})
     ])
   );
 })())
         ]),
 
-        $el('div', {className: "latest_blog_btn", flex: "center"}, [
-          $el('a', {href: "#", className: "btn btn_pink"}, [
-            "Read More Blogs"
+        $el('div', {className: "latest_video_btn", flex: "center"}, [
+          $el('a', {href: "#", className: "btn btn_pink my-auto"}, [
+            "Watch More Videos"
           ])
         ])
-
       ])
     ])
   );

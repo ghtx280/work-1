@@ -3,9 +3,10 @@
     --font-lilita: "Lilita One", system-ui, sans-serif;
     --color-yellow: #FFB703;
     --color-pink: #BC54A1;
-    --color-black: #16252E;
     --color-red: #EE1B25;
-    --color-blue: #1771BA
+    --color-blue: #1771BA;
+    --color-white: #F5F5F5;
+    --color-black: #16252E
 }
 
 .nav_active {
@@ -31,11 +32,6 @@ textarea {
 
 .font_lilita {
     font-family: var(--font-lilita)
-}
-
-.hero_h1 {
-    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-    font-size: 70px
 }
 
 .container {
@@ -134,17 +130,43 @@ header {
     background-image: url(../img/clouds.jpg)
 }
 
-header.index_header {
-    background-position: bottom center;
-    background-size: 110% 100%
-}
-
 .block_promo,
 footer {
     background-position: top;
     background-size: 140% 300%
 }
 
-.blog_item {
+.hero_img img {
+    height: 200px
+}
+
+.index_page .hero_img img {
+    height: 450px
+}
+
+.card_blog {
     box-shadow: 0 6px 20px rgba(160, 180, 200, .4)
+}
+
+.hero_title {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    font-size: 70px
+}
+
+.hero_text {
+    display: none
+}
+
+.block_header {
+    height: 500px;
+    background-position: center;
+    background-size: cover
+}
+
+.index_page .hero_text {
+    display: flex
+}
+
+.index_page .block_header {
+    height: 100vh
 }

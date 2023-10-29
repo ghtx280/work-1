@@ -2,10 +2,11 @@
   --font-main: Poppins, system-ui, sans-serif;
   --font-lilita: "Lilita One", system-ui, sans-serif;
   --color-yellow: #FFB703;
-  --color-pink: #BC54A1;
-  --color-black: #16252E;
-  --color-red: #EE1B25;
-  --color-blue: #1771BA;
+  --color-pink:   #BC54A1;
+  --color-red:    #EE1B25;
+  --color-blue:   #1771BA;
+  --color-white:  #F5F5F5;
+  --color-black:  #16252E;
 }
 
 .nav_active {
@@ -33,10 +34,7 @@ div {
   font-family: var(--font-lilita);
 }
 
-.hero_h1 {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 70px;
-}
+
 
 .container {
   width: 100%;
@@ -109,11 +107,6 @@ div {
 
 header, .clouds {
   background-image: url(../img/clouds.jpg);
-}
-
-header.index_header {
-  background-position: bottom center;
-  background-size: 110% 100%;
 }
 
 .block_promo, footer {

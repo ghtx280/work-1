@@ -36,30 +36,9 @@ const getDirectories = (source) =>
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name);
 
-const pages = ["index"];
+const pages = ["index", "about"];
 
 let fsTimeout;
-
-function formatHTML(compressedHTML) {
-  // Розділити рядки за тегами
-  const lines = compressedHTML.split("><");
-  let indentLevel = 0; // Рівень відступу
-  let formattedHTML = "";
-
-  for (const line of lines) {
-    if (line.startsWith("/")) {
-      indentLevel--; // Зменшити рівень відступу для закриваючих тегів
-    }
-
-    formattedHTML += "  ".repeat(indentLevel) + "<" + line + ">\n";
-
-    if (!line.endsWith("/") && !line.startsWith("/")) {
-      indentLevel++; // Збільшити рівень відступу для відкриваючих тегів
-    }
-  }
-
-  return formattedHTML;
-}
 
 async function run() {
   try {
@@ -77,9 +56,9 @@ async function run() {
           fs.mkdirSync("log");
         }
 
-        fs.writeFileSync(`./log/${page}.js`, 8888888);
+        fs.writeFileSync(`./log/${page}.js`, js);
 
-        let html = Function("$el", "$data", `return ${js}`)($el, {})();
+        let html = Function("$el", "$data", `return ${js}()`)($el, { page });
 
         fs.writeFileSync(
           `dist/${page}.html`,

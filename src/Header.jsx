@@ -6,7 +6,7 @@
       <div class="container grow" flex="center">
         <div flex="space">
           <div flex="24 col">
-            <h1 class="hero_h1 font_lilita c-f">
+            <h1 className="hero_ti font_lilita">
               Welcome to GlenBob's Toy Learning
             </h1>
             <div>

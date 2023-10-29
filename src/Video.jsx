@@ -1,7 +1,12 @@
 (function () {
   return (
-    <a href="#" className="ratio-16/9 bg-url('./img/video.jpg')" flex="center">
-      <img src="./img/play.svg" alt="" />
+    <a
+      href="#"
+      className="card_video ratio-16/9"
+      flex="center"
+      style="background-image: url('./img/video.jpg')"
+    >
+      <img src="./img/play.svg" alt="Play Button" />
     </a>
   );
 });
