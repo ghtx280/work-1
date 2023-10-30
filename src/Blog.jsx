@@ -7,9 +7,9 @@
 
   return (
     <a href="#" className="card_blog r-16" flex="col">
-      <img className="h-230 rt-16" src="./img/video.jpg" />
+      <img className="rt-16 h-230" src="./img/video.jpg" />
 
-      <p className="p-26+32 bg-white" text="18">
+      <p className="rb-16 p-26+32 bg-white" text="18 hover:$yellow">
         Improving staff productivity and turnaround with Digital Dictation and
         Outsourced Transcription
       </p>

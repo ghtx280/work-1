@@ -1,5 +1,5 @@
-(function() {
-  const times = count => Array.from("0".repeat(count))
+(function () {
+  const times = (count) => Array.from("0".repeat(count));
 
   return (
     (function (prop, slot) {
@@ -10,12 +10,13 @@
       "<!DOCTYPE html>",
       $el('html', null, [
         $el('head', null, [
-        $el('meta', {charset: "UTF-8"}),
-        $el('meta', {name: "viewport", content: "width=device-width, initial-scale=1.0"}),
-        $el('title', null, ["Document"]),
+          $el('meta', {charset: "UTF-8"}),
+          $el('meta', {name: "viewport", content: "width=device-width, initial-scale=1.0"}),
+          $el('title', null, ["Document"]),
           $el('script', {src: "js/blick.js"}),
           $el('script', null, [/*js*/`
             blick.config({
+              time: true,
               class: {
                 rt: { _prop: "border-radius: $ $ 0 0", _unit: "px" },
                 rr: { _prop: "border-radius: 0 $ $ 0", _unit: "px" },
@@ -29,7 +30,8 @@
                 blue:   { def: "#1771BA" },
                 white:  { def: "#F5F5F5" },
                 black:  { def: "#16252E" },
-              }
+              },
+              wrapper: ".container"
             })
           `]),
           $el('link', {rel: "stylesheet", href: "css/style.css"}),
@@ -40,9 +42,7 @@
             rel: "stylesheet"}
           )
         ]),
-        $el('body', {className:
-          $data.page == "index" ? "index_page" : ""
-        }, [slot])
+        $el('body', null, [slot])
       ])
     ])
   );
@@ -52,13 +52,19 @@
 
 
   return (
-    $el('header', {className: "block_header w-full", flex: "col"}, [
+    $el('header', {className:
+      "block_header w-full h-full pb-30" + ($data.page == "index" ? " index_header" : ""),
+    flex: "col"}, [
+
       (function (prop, slot) {
+
+
 
   function Link(link, text) {
     return (
       $el('a', {
         className: "nav_item" + ($data.page == link ? " nav_active" : ""),
+        text: "hover:$red",
         href: link + ".html"
       }, [
         text
@@ -69,18 +75,25 @@
   return (
     $el('div', {className: "container"}, [
       $el('div', {className: "nav_section pt-25", flex: "space"}, [
-        $el('img', {src: "img/logo.png", alt: "Logo"}),
+        $el('a', {href: "/"}, [
+          $el('img', {src: "img/logo.png", alt: "Logo"})
+        ]),
 
-        $el('nav', {
-          className: "nav_list bg-$white p-15+30 round",
-          flex: "40",
-          text: "all:$blue semibold"
-        }, [
-          Link("index",   "Home"),
-          Link("about",   "About"),
-          Link("video",   "Videos"),
-          Link("blog",    "Blog"),
-          Link("contact", "Contact")
+        $el('nav', {className: "nav_list bg-$white p-15+30 round all:time-100"}, [
+
+          $el('div', {className: "burger flex lg:hide", text: "hover:all:$red", onclick:
+            /*js*/`this.classList.toggle('active')`
+          }, [
+            $el('span')," ", $el('span')," ", $el('span')
+          ]),
+
+          $el('ul', {className: "m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
+            $el('li', null, [Link("index", "Home")]),
+            $el('li', null, [Link("about", "About")]),
+            $el('li', null, [Link("video", "Videos")]),
+            $el('li', null, [Link("blog", "Blog")]),
+            $el('li', null, [Link("contact", "Contact")])
+          ])
         ])
       ])
     ])
@@ -88,49 +101,46 @@
 })(),
 
       $el('div', {className: "hero_section container", flex: "center grow"}, [
-        $el('div', {flex: "40 space"}, [
+        $el('div', {flex: "40 space m-lg:col-rev"}, [
 
-          $el('div', {className: "hero_text", flex: "24 col ai-s"}, [
-            $el('h1', {className: "hero_title font_lilita", text: "white"}, [
+          $el('div', {className: "hero_content", flex: "24 col lg:ai-s", text: "m-lg:center"}, [
+            $el('h1', {className: "hero_title font_lilita", text: "50 lg:70 white"}, [
               "Welcome to GlenBob's Toy Learning"
             ]),
 
-            $el('div', {className: "relative"}, [
-              $el('p', null, [
-                "Dive into a world where toys meet education, sparking creativity" + ' ' +
-                "and learning in the young minds. Join us as we explore the" + ' ' +
-                "adventures of Numberblocks and the magic of counting, all while" + ' ' +
-                "incorporating interactive play with Mathlink cubes, magnet" + ' ' +
-                "cubes, and more."
-              ]),
-              $el('p', {className: "mt-10"}, [
-                "Every video is tailored to encourage learning, blending fun with" + ' ' +
-                "foundational knowledge essential for Pre-K and kindergarten."
-              ]),
-              $el('a', {href: "#"}, [
-                (function (prop = {}) {
+            $el('p', {className: "hero_text relative"}, [
+              "Dive into a world where toys meet education, sparking creativity" + ' ' +
+              "and learning in the young minds. Join us as we explore the" + ' ' +
+              "adventures of Numberblocks and the magic of counting, all while" + ' ' +
+              "incorporating interactive play with Mathlink cubes, magnet" + ' ' +
+              "cubes, and more.",
+              $el('br'),
+              $el('br'),
+              "Every video is tailored to encourage learning, blending fun with" + ' ' +
+              "foundational knowledge essential for Pre-K and kindergarten."
+            ]),
+
+            $el('a', {href: "#", className: "h-50"}, [
+              (function (prop = {}) {
   ;
 
 
   return (
     $el('img', {className:
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : ""),
+      "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/yt.svg", alt: "YouTube"})
   );
-})({h: "50", class: "absolute bottom--70"})
-              ])
+})()
             ])
           ]),
 
-          $el('div', {className: "hero_img shrink-0"}, [
+          $el('div', {className: "hero_image shrink-0 m-lg:h-200"}, [
             (function (prop = {}) {
   ;
 
   return (
     $el('img', {className:
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : ""),
+      "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -141,55 +151,65 @@
     ])
   );
 })(),
-      (function () {
+
+      (function (prop = {}) {
 
 
   return (
-    $el('div', {className: "block_latest_video py-85 over-x-hidden"}, [
-      $el('div', {className: "container", flex: "66 col"}, [
-        $el('h2', {className: "latest_video_title font_lilita", text: "48 $yellow center"}, [
-          "Latest Videos on YouTube"
+    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
+      $el('div', {className: "container", flex: "30 lg:66 col"}, [
+
+        $el('h2', {className: `latest_${prop.type}_title font_lilita`, text: "24 lg:48 $yellow center"}, [
+          prop.title
         ]),
 
-        $el('div', {className: "latest_video_grid", grid: "50+30 cols-3"}, [
-          times(9).map(() => (function () {
+        $el('div', {className: `latest_${prop.type}_grid`, grid: "50+30 md:cols-2 lg:cols-3"}, [
+          times(prop.count).map(() => prop.card)
+        ]),
+
+        $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
+          $el('a', {href: "#", className: "btn btn_pink"}, [
+            prop.btn
+          ])
+        ])
+
+      ])
+    ])
+  );
+})({type: "video",
+        title: "Latest Videos on YouTube",
+        btn: "Watch More Videos",
+        count: 9,
+        card: (function () {
+  ;
+
   return (
     $el('a', {
       href: "#",
-      className: "card_video ratio-16/9",
       flex: "center",
+      className: "card_video ratio-16/9",
       style: "background-image: url('./img/video.jpg')"
     }, [
       $el('img', {src: "./img/play.svg", alt: "Play Button"})
     ])
   );
-})())
-        ]),
+})()}
+      ),
 
-        $el('div', {className: "latest_video_btn", flex: "center"}, [
-          $el('a', {href: "#", className: "btn btn_pink my-auto"}, [
-            "Watch More Videos"
-          ])
-        ])
-      ])
-    ])
-  );
-})(),
       (function () {
   ;
 
   return (
     $el('div', {className: "block_promo clouds py-65"}, [
-      $el('div', {className: "container", flex: "55"}, [
+      $el('div', {className: "container", flex: "20 lg:55 m-lg:col"}, [
 
-        $el('div', {className: "promo_img w-490 shrink-0"}, [
+        $el('div', {className: "promo_img lg:h-360 shrink-0"}, [
           (function (prop = {}) {
   ;
 
   return (
     $el('img', {className:
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : ""),
+      "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -198,17 +218,18 @@
         $el('div', {className: "promo_divider w-1 bg-white"}),
 
         $el('div', {className: "promo_text", flex: "35 col ai-s"}, [
-          (function (prop = {}) {
+          $el('div', {className: "h-50"}, [
+            (function (prop = {}) {
   ;
 
 
   return (
     $el('img', {className:
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : ""),
+      "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/yt.svg", alt: "YouTube"})
   );
-})({h: "50"}),
+})()
+          ]),
 
           $el('h2', {className: "font_lilita", text: "54 white"}, [
             "Subscribe to GlenBob's Toy Learning on YouTube"
@@ -228,44 +249,51 @@
     ])
   );
 })(),
-      (function () {
+
+      (function (prop = {}) {
 
 
   return (
-    $el('div', {className: "block_latest_blog py-85 over-x-hidden"}, [
-      $el('div', {className: "container", flex: "66 col"}, [
+    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
+      $el('div', {className: "container", flex: "30 lg:66 col"}, [
 
-        $el('h2', {className: "latest_blog_title font_lilita", text: "48 $yellow center"}, [
-          "Latest Blog Posts"
+        $el('h2', {className: `latest_${prop.type}_title font_lilita`, text: "24 lg:48 $yellow center"}, [
+          prop.title
         ]),
 
-        $el('div', {className: "latest_blog_grid", grid: "50+30 cols-3"}, [
-          times(9).map(() => (function () {
-  ;
-
-  return (
-    $el('a', {href: "#", className: "card_blog r-16", flex: "col"}, [
-      $el('img', {className: "h-230 rt-16", src: "./img/video.jpg"}),
-
-      $el('p', {className: "p-26+32 bg-white", text: "18"}, [
-        "Improving staff productivity and turnaround with Digital Dictation and" + ' ' +
-        "Outsourced Transcription"
-      ])
-    ])
-  );
-})())
+        $el('div', {className: `latest_${prop.type}_grid`, grid: "50+30 md:cols-2 lg:cols-3"}, [
+          times(prop.count).map(() => prop.card)
         ]),
 
-        $el('div', {className: "latest_blog_btn", flex: "center"}, [
+        $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
           $el('a', {href: "#", className: "btn btn_pink"}, [
-            "Read More Blogs"
+            prop.btn
           ])
         ])
 
       ])
     ])
   );
-})(),
+})({type: "blog",
+        title: "Latest Blog Posts",
+        btn: "Read More Blogs",
+        count: 9,
+        card: (function () {
+  ;
+
+  return (
+    $el('a', {href: "#", className: "card_blog r-16", flex: "col"}, [
+      $el('img', {className: "rt-16 h-230", src: "./img/video.jpg"}),
+
+      $el('p', {className: "rb-16 p-26+32 bg-white", text: "18 hover:$yellow"}, [
+        "Improving staff productivity and turnaround with Digital Dictation and" + ' ' +
+        "Outsourced Transcription"
+      ])
+    ])
+  );
+})()}
+      ),
+
       (function () {
   ;
 
@@ -291,19 +319,21 @@
     $el('template', null, [
 
       $el('footer', {className: "clouds py-50"}, [
-        $el('div', {className: "container", flex: "130 space ai-s"}, [
+        $el('div', {className: "container", flex: "50 lg:130 space ai-s m-lg:col"}, [
 
           $el('div', {className: "info_section", flex: "20 col ai-s"}, [
-            (function (prop = {}) {
+            $el('div', {className: "h-150"}, [
+              (function (prop = {}) {
   ;
 
   return (
     $el('img', {className:
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : ""),
+      "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
-})({h: "150"}),
+})()
+            ]),
+
             $el('p', {text: "white"}, [
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam" + ' ' +
               "consequat diam semper est semper sodales."
@@ -316,8 +346,7 @@
 
   return (
     $el('img', {className:
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : ""),
+      "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/yt.svg", alt: "YouTube"})
   );
 })({h: "30"})

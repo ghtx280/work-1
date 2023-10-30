@@ -14,7 +14,7 @@ export function $el(name, attrs, cnt) {
   let attrsStr = "";
 
   for (let key in attrs) {
-    attrsStr += ` ${key == "className" ? "class" : key}="${attrs[key].trim?.()}"`;
+    attrsStr += ` ${key == "className" ? "class" : key}="${attrs[key].trim?.() || ""}"`;
   }
 
   if (name in voidElements) {

@@ -6,12 +6,13 @@
       {"<!DOCTYPE html>"}
       <html>
         <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
           <script src="js/blick.js"></script>
           <script>{/*js*/`
             blick.config({
+              time: true,
               class: {
                 rt: { _prop: "border-radius: $ $ 0 0", _unit: "px" },
                 rr: { _prop: "border-radius: 0 $ $ 0", _unit: "px" },
@@ -25,7 +26,8 @@
                 blue:   { def: "#1771BA" },
                 white:  { def: "#F5F5F5" },
                 black:  { def: "#16252E" },
-              }
+              },
+              wrapper: ".container"
             })
           `}</script>
           <link rel="stylesheet" href="css/style.css" />
@@ -36,9 +38,7 @@
             rel="stylesheet"
           />
         </head>
-        <body className={
-          $data.page == "index" ? "index_page" : ""
-        }>{slot}</body>
+        <body>{slot}</body>
       </html>
     </template>
   );

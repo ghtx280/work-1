@@ -3,16 +3,18 @@
 
   return (
     <div className="block_promo clouds py-65">
-      <div className="container" flex="55">
+      <div className="container" flex="20 lg:55 m-lg:col">
 
-        <div className="promo_img w-490 shrink-0">
+        <div className="promo_img lg:h-360 shrink-0">
           <Hero />
         </div>
 
         <div className="promo_divider w-1 bg-white" />
 
         <div className="promo_text" flex="35 col ai-s">
-          <YouTube h="50" />
+          <div className="h-50">
+            <YouTube />
+          </div>
 
           <h2 className="font_lilita" text="54 white">
             Subscribe to GlenBob's Toy Learning on YouTube

@@ -4,8 +4,7 @@
 
   return (
     <img className={
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : "")
+      "h-full" + (prop.className ? " " + prop.className : "")
     } src="./img/yt.svg" alt="YouTube" />
   );
 });

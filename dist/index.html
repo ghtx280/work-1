@@ -8,6 +8,7 @@
     <script src="js/blick.js"></script>
     <script>
         blick.config({
+            time: true,
             class: {
                 rt: {
                     _prop: "border-radius: $ $ 0 0",
@@ -45,7 +46,8 @@
                 black: {
                     def: "#16252E"
                 },
-            }
+            },
+            wrapper: ".container"
         })
     </script>
     <link rel="stylesheet" href="css/style.css" />
@@ -54,128 +56,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
-<body class="index_page">
-    <header class="block_header w-full" flex="col">
+<body>
+    <header class="block_header w-full h-full pb-30 index_header" flex="col">
         <div class="container">
             <div class="nav_section pt-25" flex="space">
-                <img src="img/logo.png" alt="Logo" />
-                <nav class="nav_list bg-$white p-15+30 round" flex="40" text="all:$blue semibold">
-                    <a class="nav_item nav_active" href="index.html">Home</a>
-                    <a class="nav_item" href="about.html">About</a>
-                    <a class="nav_item" href="video.html">Videos</a>
-                    <a class="nav_item" href="blog.html">Blog</a>
-                    <a class="nav_item" href="contact.html">Contact</a>
+                <a href="/">
+                    <img src="img/logo.png" alt="Logo" />
+                </a>
+                <nav class="nav_list bg-$white p-15+30 round all:time-100">
+                    <div class="burger flex lg:hide" text="hover:all:$red" onclick="this.classList.toggle('active')">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="m-lg:hide" flex="40" text="all:$blue semibold">
+                        <li>
+                            <a class="nav_item nav_active" text="hover:$red" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav_item" text="hover:$red" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="nav_item" text="hover:$red" href="video.html">Videos</a>
+                        </li>
+                        <li>
+                            <a class="nav_item" text="hover:$red" href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a class="nav_item" text="hover:$red" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>
         <div class="hero_section container" flex="center grow">
-            <div flex="40 space">
-                <div class="hero_text" flex="24 col ai-s">
-                    <h1 class="hero_title font_lilita" text="white">Welcome to GlenBob's Toy Learning</h1>
-                    <div class="relative">
-                        <p>Dive into a world where toys meet education, sparking creativity and learning in the young minds. Join us as we explore the adventures of Numberblocks and the magic of counting, all while incorporating interactive play with Mathlink cubes, magnet cubes, and more.</p>
-                        <p class="mt-10">Every video is tailored to encourage learning, blending fun with foundational knowledge essential for Pre-K and kindergarten.</p>
-                        <a href="#">
-                            <img class="h-50 absolute bottom--70" src="./img/yt.svg" alt="YouTube" />
-                        </a>
-                    </div>
+            <div flex="40 space m-lg:col-rev">
+                <div class="hero_content" flex="24 col lg:ai-s" text="m-lg:center">
+                    <h1 class="hero_title font_lilita" text="50 lg:70 white">Welcome to GlenBob's Toy Learning</h1>
+                    <p class="hero_text relative">Dive into a world where toys meet education, sparking creativity and learning in the young minds. Join us as we explore the adventures of Numberblocks and the magic of counting, all while incorporating interactive play with Mathlink cubes, magnet cubes, and more.
+                        <br />
+                        <br />
+                        Every video is tailored to encourage learning, blending fun with foundational knowledge essential for Pre-K and kindergarten.
+                    </p>
+                    <a href="#" class="h-50">
+                        <img class="h-full" src="./img/yt.svg" alt="YouTube" />
+                    </a>
                 </div>
-                <div class="hero_img shrink-0">
-                    <img class="" src="./img/hero.png" alt="Hero image" />
+                <div class="hero_image shrink-0 m-lg:h-200">
+                    <img class="h-full" src="./img/hero.png" alt="Hero image" />
                 </div>
             </div>
         </div>
     </header>
-    <div class="block_latest_video py-85 over-x-hidden">
-        <div class="container" flex="66 col">
-            <h2 class="latest_video_title font_lilita" text="48 $yellow center">Latest Videos on YouTube</h2>
-            <div class="latest_video_grid" grid="50+30 cols-3">
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+    <div class="block_latest_video py-30 lg:py-85 over-hidden">
+        <div class="container" flex="30 lg:66 col">
+            <h2 class="latest_video_title font_lilita" text="24 lg:48 $yellow center">Latest Videos on YouTube</h2>
+            <div class="latest_video_grid" grid="50+30 md:cols-2 lg:cols-3">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
-                <a href="#" class="card_video ratio-16/9" flex="center" style="background-image: url('./img/video.jpg')">
+                <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
                     <img src="./img/play.svg" alt="Play Button" />
                 </a>
             </div>
             <div class="latest_video_btn" flex="center">
-                <a href="#" class="btn btn_pink my-auto">Watch More Videos</a>
+                <a href="#" class="btn btn_pink">Watch More Videos</a>
             </div>
         </div>
     </div>
     <div class="block_promo clouds py-65">
-        <div class="container" flex="55">
-            <div class="promo_img w-490 shrink-0">
-                <img class="" src="./img/hero.png" alt="Hero image" />
+        <div class="container" flex="20 lg:55 m-lg:col">
+            <div class="promo_img lg:h-360 shrink-0">
+                <img class="h-full" src="./img/hero.png" alt="Hero image" />
             </div>
             <div class="promo_divider w-1 bg-white"></div>
             <div class="promo_text" flex="35 col ai-s">
-                <img class="h-50" src="./img/yt.svg" alt="YouTube" />
+                <div class="h-50">
+                    <img class="h-full" src="./img/yt.svg" alt="YouTube" />
+                </div>
                 <h2 class="font_lilita" text="54 white">Subscribe to GlenBob's Toy Learning on YouTube</h2>
                 <p text="20 white">Join us as we explore the adventures of Numberblocks and the magic of counting</p>
                 <a href="#" class="btn btn_yellow">Subscribe Today</a>
             </div>
         </div>
     </div>
-    <div class="block_latest_blog py-85 over-x-hidden">
-        <div class="container" flex="66 col">
-            <h2 class="latest_blog_title font_lilita" text="48 $yellow center">Latest Blog Posts</h2>
-            <div class="latest_blog_grid" grid="50+30 cols-3">
+    <div class="block_latest_blog py-30 lg:py-85 over-hidden">
+        <div class="container" flex="30 lg:66 col">
+            <h2 class="latest_blog_title font_lilita" text="24 lg:48 $yellow center">Latest Blog Posts</h2>
+            <div class="latest_blog_grid" grid="50+30 md:cols-2 lg:cols-3">
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
                 <a href="#" class="card_blog r-16" flex="col">
-                    <img class="h-230 rt-16" src="./img/video.jpg" />
-                    <p class="p-26+32 bg-white" text="18">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
+                    <img class="rt-16 h-230" src="./img/video.jpg" />
+                    <p class="rb-16 p-26+32 bg-white" text="18 hover:$yellow">Improving staff productivity and turnaround with Digital Dictation and Outsourced Transcription</p>
                 </a>
             </div>
             <div class="latest_blog_btn" flex="center">
@@ -184,13 +208,15 @@
         </div>
     </div>
     <footer class="clouds py-50">
-        <div class="container" flex="130 space ai-s">
+        <div class="container" flex="50 lg:130 space ai-s m-lg:col">
             <div class="info_section" flex="20 col ai-s">
-                <img class="h-150" src="./img/hero.png" alt="Hero image" />
+                <div class="h-150">
+                    <img class="h-full" src="./img/hero.png" alt="Hero image" />
+                </div>
                 <p text="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat diam semper est semper sodales.</p>
                 <a href="#" flex="10 ai-c">
                     <span class="font_lilita" text="18 white">Find Us on</span>
-                    <img class="h-30" src="./img/yt.svg" alt="YouTube" />
+                    <img class="h-full" src="./img/yt.svg" alt="YouTube" />
                 </a>
             </div>
             <div class="links_quick_section shrink-0">

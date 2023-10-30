@@ -3,8 +3,7 @@
 
   return (
     <img className={
-      (prop.h ? "h-" + prop.h : "") +
-      (prop.class ? " " + prop.class : "")
+      "h-full" + (prop.className ? " " + prop.className : "")
     } src="./img/hero.png" alt="Hero image" />
   );
 });

@@ -23,10 +23,13 @@
     <template>
       
       <footer className="clouds py-50">
-        <div className="container" flex="130 space ai-s">
+        <div className="container" flex="50 lg:130 space ai-s m-lg:col">
           
           <div className="info_section" flex="20 col ai-s">
-            <Hero h="150" />
+            <div className="h-150">
+              <Hero />
+            </div>
+
             <p text="white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               consequat diam semper est semper sodales.
