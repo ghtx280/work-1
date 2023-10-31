@@ -13,8 +13,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      
     }
 
+    .pag_item a {
+      color: var(--black);
+    }
     .pag_item.pag_active {
       background-color: var(--pink);
     }

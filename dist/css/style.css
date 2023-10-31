@@ -164,6 +164,10 @@ form>div {
     transition: all .3s
 }
 
+.pag_item a {
+    color: var(--black)
+}
+
 .burger span,
 .inp {
     position: relative
