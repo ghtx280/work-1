@@ -169,8 +169,8 @@
                 "Here are some helpful links"
               ]),
               $el('div', {flex: "24"}, [
-                ["Homepage","Videos", "Blog"].map(e => (
-                  $el('a', {href: "#", className: "btn btn_yellow_round"}, [e])
+                [["/","Homepage"],["videos","Videos"], ["blog","Blog"]].map(([link, text]) => (
+                  $el('a', {href: link, className: "btn btn_yellow_round"}, [text])
                 ))
               ])
             ])

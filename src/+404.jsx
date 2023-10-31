@@ -57,8 +57,8 @@
                 Here are some helpful links
               </p>
               <div flex="24">
-                {["Homepage","Videos", "Blog"].map(e => (
-                  <a href="#" className="btn btn_yellow_round">{e}</a>
+                {[["/","Homepage"],["videos","Videos"], ["blog","Blog"]].map(([link, text]) => (
+                  <a href={link} className="btn btn_yellow_round">{text}</a>
                 ))}
               </div>
             </div>
