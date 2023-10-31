@@ -18,6 +18,7 @@
     position: relative;
     background-color: currentColor;
     transition: all 0.3s;
+    border-radius: 99px;
   }
   
   .burger.active span:nth-of-type(1) {

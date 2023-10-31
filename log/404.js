@@ -168,7 +168,7 @@
               $el('p', {className: "mt-48", text: "18 light center"}, [
                 "Here are some helpful links"
               ]),
-              $el('div', {flex: "24"}, [
+              $el('div', {flex: "24 wrap center"}, [
                 [["/","Homepage"],["videos","Videos"], ["blog","Blog"]].map(([link, text]) => (
                   $el('a', {href: link, className: "btn btn_yellow_round"}, [text])
                 ))

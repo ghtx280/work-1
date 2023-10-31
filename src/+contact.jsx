@@ -12,6 +12,7 @@
       border-width: 1px;
       border-color: #CED3D9;
       border-radius: 3px;
+      resize: vertical;
     }
     .inp label {
       pointer-events: none;

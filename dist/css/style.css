@@ -128,7 +128,8 @@ footer {
     padding: 14px;
     border-width: 1px;
     border-color: #ced3d9;
-    border-radius: 3px
+    border-radius: 3px;
+    resize: vertical
 }
 
 .inp label {
@@ -162,7 +163,8 @@ form>div {
     height: 3.2px;
     position: relative;
     background-color: currentColor;
-    transition: all .3s
+    transition: all .3s;
+    border-radius: 99px
 }
 
 .pag_item a {

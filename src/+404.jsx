@@ -56,7 +56,7 @@
               <p className="mt-48" text="18 light center">
                 Here are some helpful links
               </p>
-              <div flex="24">
+              <div flex="24 wrap center">
                 {[["/","Homepage"],["videos","Videos"], ["blog","Blog"]].map(([link, text]) => (
                   <a href={link} className="btn btn_yellow_round">{text}</a>
                 ))}

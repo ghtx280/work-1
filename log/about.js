@@ -162,7 +162,7 @@
           "GlenBob’s Toy Learning"
         ]),
 
-        $el('div', {className: "about_text", flex: "30", text: "all:18"}, [
+        $el('div', {className: "about_text", flex: "30 m-lg:col", text: "all:18"}, [
           $el('p', {className: "w-full"}, [
             "Step into a universe where toys and education converge, igniting imagination and understanding in young enthusiasts. Dive deep into the world of Numberblocks, where counting becomes a thrilling journey, and numbers transform into vibrant characters.",
             $el('br'),
