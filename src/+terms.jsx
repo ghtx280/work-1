@@ -4,19 +4,9 @@
   return (
     <Html>
       <Header />
-      
       <AboutContent />
-
       <Promo />
-
-      <Latest
-        type="video"
-        title="Latest Videos on YouTube"
-        btn="Watch More Videos"
-        count={9}
-        card={<Video />}
-      />
-
+      <LatestVideo />
       <Footer />
       <Copy />
     </Html>

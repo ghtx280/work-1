@@ -74,7 +74,7 @@
                             <a class="nav_item" text="hover:$red" href="index.html">Home</a>
                         </li>
                         <li>
-                            <a class="nav_item nav_active" text="hover:$red" href="about.html">About</a>
+                            <a class="nav_item" text="hover:$red" href="about.html">About</a>
                         </li>
                         <li>
                             <a class="nav_item" text="hover:$red" href="videos.html">Videos</a>
@@ -83,7 +83,7 @@
                             <a class="nav_item" text="hover:$red" href="blog.html">Blog</a>
                         </li>
                         <li>
-                            <a class="nav_item" text="hover:$red" href="contact.html">Contact</a>
+                            <a class="nav_item nav_active" text="hover:$red" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -108,78 +108,40 @@
             </div>
         </div>
     </header>
-    <div class="about_section pt-35 pb-80 over-hidden">
-        <div class="container graphics graphics_invert" flex="24 col">
-            <h2 class="about_title title_40">GlenBob’s Toy Learning</h2>
-            <div class="about_text" flex="30" text="all:18">
-                <p class="w-full">Step into a universe where toys and education converge, igniting imagination and understanding in young enthusiasts. Dive deep into the world of Numberblocks, where counting becomes a thrilling journey, and numbers transform into vibrant characters.
-                    <br />
-                    <br />
-                    Engage with hands-on learning as we play with Mathlink cubes, magnetic cubes, Numberblocks figures, and other educational toys that bridge fun and foundational skills vital for Pre-K and kindergarten.
-                </p>
-                <p class="w-full">From exploring patterns, shapes, and basic maths to storytelling with Numberblocks and Alphablocks, our videos are meticulously crafted to foster both amusement and learning. Born from the heart of a parent who recognizes the significance of blending play with education, GlenBob's promises content that's kid-friendly, interactive, and always wholesome. Here, learning colors, spelling, reading, and even multiplication is an adventure!
-                    <br />
-                    <br />
-                    GlenBob's is not just a channel – it's a vibrant community where educational content is delightful, kids are captivated, and parents find assurance in trusted learning resources.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="block_promo clouds py-65">
-        <div class="container" flex="20 lg:55 m-lg:col">
-            <div class="promo_img lg:h-360 shrink-0">
-                <img class="h-full" src="./img/hero.png" alt="Hero image" />
-            </div>
-            <div class="promo_divider w-1 bg-white"></div>
-            <div class="promo_text" flex="35 col ai-s">
-                <a href="#" class="h-50">
-                    <img class="h-full" src="./img/yt.svg" alt="YouTube" />
-                </a>
-                <h2 class="font_lilita" text="54 white">Subscribe to GlenBob's Toy Learning on YouTube</h2>
-                <p text="20 white">Join us as we explore the adventures of Numberblocks and the magic of counting</p>
-                <a href="#" class="btn btn_yellow">Subscribe Today</a>
-            </div>
-        </div>
-    </div>
-    <div class="block_latest_video py-30 lg:py-85 over-hidden">
-        <div class="container graphics">
-            <div flex="30 lg:66 col">
-                <h2 class="latest_video_title title_48" text="m-lg:24">Latest Videos on YouTube</h2>
-                <div class="latest_video_grid" grid="50+30 md:cols-2 lg:cols-3">
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
-                    <a href="#" flex="center" class="card_video ratio-16/9" style="background-image: url('./img/video.jpg')">
-                        <img src="./img/play.svg" alt="Play Button" />
-                    </a>
+    <main class="bg-#F1F9FD py-50 over-hidden">
+        <div class="container" flex="center">
+            <form action="/send-contact.php" method="POST">
+                <div class="bg-white max-w-480 p-60 graphics" flex="32 col center">
+                    <h3 class="font_lilita" text="30 #22A0D9 center">Contact GlenBob</h3>
+                    <div flex="17 col">
+                        <div class="inp">
+                            <input type="text" placeholder="*" required="" />
+                            <label>First Name</label>
+                        </div>
+                        <div class="inp">
+                            <input type="text" placeholder="*" required="" />
+                            <label>Last Name</label>
+                        </div>
+                        <div class="inp">
+                            <input type="email" placeholder="*" required="" />
+                            <label>Email</label>
+                        </div>
+                        <div class="inp">
+                            <textarea placeholder="*" required=""></textarea>
+                            <label>Message</label>
+                        </div>
+                        <p text="11 regular">
+                            <strong>Glenbob</strong>
+                            needs the contact information you provide to us to contact you about our services. For information on how to unsubscribe, as well as our privacy practices, review our
+                            <a href="#">Privacy Policy</a>
+                            .
+                        </p>
+                    </div>
+                    <button class="btn btn_green" type="submit">Say Hello</button>
                 </div>
-                <div class="latest_video_btn" flex="center">
-                    <a href="#" class="btn btn_pink">Watch More Videos</a>
-                </div>
-            </div>
+            </form>
         </div>
-    </div>
+    </main>
     <footer class="clouds py-50">
         <div class="container" flex="50 lg:130 space ai-s m-lg:col">
             <div class="info_section" flex="20 col ai-s">

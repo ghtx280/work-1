@@ -14,7 +14,7 @@
     }
 
     .block_header {
-      min-height: 500px;
+      height: 500px;
       background-position: center;
       background-size: cover;
     }

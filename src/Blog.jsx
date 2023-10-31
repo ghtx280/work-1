@@ -9,7 +9,7 @@
     <a href="#" className="card_blog r-16" flex="col">
       <img className="rt-16 h-230" src="./img/video.jpg" />
 
-      <p className="rb-16 p-26+32 bg-white" text="18 hover:$yellow">
+      <p className="rb-16 p-26+32 bg-white" text="18 $black hover:#109FDA">
         Improving staff productivity and turnaround with Digital Dictation and
         Outsourced Transcription
       </p>

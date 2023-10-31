@@ -19,11 +19,13 @@
         type="blog"
         title="Latest Blog Posts"
         btn="Read More Blogs"
-        count={9}
+        count={6}
+        graph={["invert"]}
         card={<Blog />}
       />
-      
+
       <Footer />
+      <Copy />
     </Html>
   );
 });

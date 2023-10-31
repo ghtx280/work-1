@@ -1,14 +1,14 @@
 (function () {
   return (
-    <div className="block_latest_blog pt-35 pb-80 over-hidden">
+    <div className="about_section pt-35 pb-80 over-hidden">
 
-      <div className="container" flex="24 col">
+      <div className="container graphics graphics_invert" flex="24 col">
 
-        <h2 className="latest_blog_title font_lilita" text="40 $yellow">
+        <h2 className="about_title title_40">
           GlenBob’s Toy Learning
         </h2>
 
-        <div flex="30" text="all:18">
+        <div className="about_text" flex="30" text="all:18">
           <p className="w-full">
             Step into a universe where toys and education converge, igniting imagination and understanding in young enthusiasts. Dive deep into the world of Numberblocks, where counting becomes a thrilling journey, and numbers transform into vibrant characters.
             <br />

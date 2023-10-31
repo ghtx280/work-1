@@ -90,7 +90,7 @@
           $el('ul', {className: "m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
             $el('li', null, [Link("index", "Home")]),
             $el('li', null, [Link("about", "About")]),
-            $el('li', null, [Link("video", "Videos")]),
+            $el('li', null, [Link("videos", "Videos")]),
             $el('li', null, [Link("blog", "Blog")]),
             $el('li', null, [Link("contact", "Contact")])
           ])
@@ -140,7 +140,7 @@
 
   return (
     $el('img', {className:
-      "h-full" + (prop.className ? " " + prop.className : ""),
+      "h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -151,17 +151,18 @@
     ])
   );
 })(),
+
       (function () {
   return (
-    $el('div', {className: "block_latest_blog pt-35 pb-80 over-hidden"}, [
+    $el('div', {className: "about_section pt-35 pb-80 over-hidden"}, [
 
-      $el('div', {className: "container", flex: "24 col"}, [
+      $el('div', {className: "container graphics graphics_invert", flex: "24 col"}, [
 
-        $el('h2', {className: "latest_blog_title font_lilita", text: "40 $yellow"}, [
+        $el('h2', {className: "about_title title_40"}, [
           "GlenBob’s Toy Learning"
         ]),
 
-        $el('div', {flex: "30", text: "all:18"}, [
+        $el('div', {className: "about_text", flex: "30", text: "all:18"}, [
           $el('p', {className: "w-full"}, [
             "Step into a universe where toys and education converge, igniting imagination and understanding in young enthusiasts. Dive deep into the world of Numberblocks, where counting becomes a thrilling journey, and numbers transform into vibrant characters.",
             $el('br'),
@@ -182,6 +183,7 @@
     ])
   );
 })(),
+
       (function () {
   ;
 
@@ -195,7 +197,7 @@
 
   return (
     $el('img', {className:
-      "h-full" + (prop.className ? " " + prop.className : ""),
+      "h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -204,7 +206,7 @@
         $el('div', {className: "promo_divider w-1 bg-white"}),
 
         $el('div', {className: "promo_text", flex: "35 col ai-s"}, [
-          $el('div', {className: "h-50"}, [
+          $el('a', {href: "#", className: "h-50"}, [
             (function (prop = {}) {
   ;
 
@@ -235,19 +237,69 @@
     ])
   );
 })(),
-      (function () {
 
+      (function (prop = {}) {
+
+  prop.graph = prop.graph || [];
+
+
+  ;;
 
   return (
-    $el('div', {className: "block_latest_video py-30 lg:py-85 over-hidden"}, [
-      $el('div', {className: "container", flex: "30 lg:66 col"}, [
+    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
+      $el('div', {
+        className:
+          "container graphics " + (prop.graph.map(e => `graphics_${e}` || "").join(" "))
 
-        $el('h2', {className: "latest_video_title font_lilita", text: "24 lg:48 $yellow center"}, [
-          "Latest Videos on YouTube"
-        ]),
+      }, [
+        $el('div', {flex: "30 lg:66 col"}, [
+          $el('h2', {
+            className: `latest_${prop.type}_title title_48`,
+            text: "m-lg:24"
+          }, [
+            prop.title
+          ]),
 
-        $el('div', {className: "latest_video_grid", grid: "50+30 md:cols-2 lg:cols-3"}, [
-          times(9).map(() => (function () {
+          $el('div', {
+            className: `latest_${prop.type}_grid`,
+            grid: "50+30 md:cols-2 lg:cols-3"
+          }, [
+            times(prop.count).map(() => prop.card)
+          ]),
+
+          prop.btn ? (
+            $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
+              $el('a', {href: "#", className: "btn btn_pink"}, [
+                prop.btn
+              ])
+            ])
+          ) : (
+            $el('ul', {className: `pag`, flex: "8 center"}, [
+
+              [..."12345"].map((e) => (
+                $el('li', {className: "pag_item " + (e == 1 ? "pag_active" : "")}, [
+                  $el('a', {href: "#"}, [e])
+                ])
+              )),
+
+              $el('li', {className: "pag_item pag_arrow"}, [
+                $el('a', {href: "#"}, [
+                  $el('svg', {width: "15", height: "10", viewBox: "0 0 15 10", fill: "none", xmlns: "http://www.w3.org/2000/svg"}, [
+                    $el('path', {d: "M1 4.35C0.641015 4.35 0.35 4.64101 0.35 5C0.35 5.35899 0.641015 5.65 1 5.65L1 4.35ZM14.4596 5.45962C14.7135 5.20578 14.7135 4.79422 14.4596 4.54038L10.323 0.403806C10.0692 0.149965 9.65765 0.149965 9.40381 0.403806C9.14997 0.657647 9.14997 1.0692 9.40381 1.32304L13.0808 5L9.40381 8.67696C9.14997 8.9308 9.14997 9.34235 9.40381 9.59619C9.65765 9.85003 10.0692 9.85003 10.323 9.59619L14.4596 5.45962ZM1 5.65L14 5.65V4.35L1 4.35L1 5.65Z", fill: "black"})
+                  ])
+                ])
+              ])
+            ])
+          )
+        ])
+      ])
+    ])
+  );
+})({type: "video",
+        title: "Latest Videos on YouTube",
+        btn: "Watch More Videos",
+        count: 9,
+        card: (function () {
   ;
 
   return (
@@ -260,19 +312,9 @@
       $el('img', {src: "./img/play.svg", alt: "Play Button"})
     ])
   );
-})())
-        ]),
+})()}
+      ),
 
-        $el('div', {className: "latest_video_btn", flex: "center"}, [
-          $el('a', {href: "#", className: "btn btn_pink my-auto"}, [
-            "Watch More Videos"
-          ])
-        ])
-
-      ])
-    ])
-  );
-})(),
       (function () {
   ;
 
@@ -295,8 +337,6 @@
   }
 
   return (
-    $el('template', null, [
-
       $el('footer', {className: "clouds py-50"}, [
         $el('div', {className: "container", flex: "50 lg:130 space ai-s m-lg:col"}, [
 
@@ -307,7 +347,7 @@
 
   return (
     $el('img', {className:
-      "h-full" + (prop.className ? " " + prop.className : ""),
+      "h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -335,10 +375,12 @@
           $el('div', {className: "links_quick_section shrink-0"}, [
             Title("Quick Links", "links_quick_title"),
 
-            $el('div', {className: "links_quick_list", flex: "5 col", text: "16"}, [
+            $el('ul', {className: "links_quick_list", flex: "5 col", text: "16"}, [
               Object.entries(links).map(([link, text]) => (
-                $el('a', {className: "links_quick_item", text: "white hover:$yellow 400", href: link}, [
-                  text
+                $el('li', null, [
+                  $el('a', {className: "links_quick_item", text: "white hover:$yellow 400", href: link}, [
+                    text
+                  ])
                 ])
               ))
             ])
@@ -347,10 +389,10 @@
           $el('div', {className: "links_blog_section w-full"}, [
             Title("Latest Blog Feed", "links_blog_title"),
 
-            $el('div', {className: "links_blog_list", flex: "15 col"}, [
+            $el('ul', {className: "links_blog_list", flex: "15 col"}, [
               times(3).map(() => (
-                $el('a', {href: "#", className: "links_blog_item", text: "all:white 400"}, [
-                  $el('p', {className: "font_lilita mb-5", text: "18 white hover:$yellow"}, [
+                $el('li', {className: "links_blog_item", text: "all:white 400"}, [
+                  $el('a', {href: "#", className: "font_lilita mb-5", text: "18 white hover:$yellow"}, [
                     "Numberblock Even Numbers Missing from step-squad!"
                   ]),
                   $el('p', null, [
@@ -362,14 +404,15 @@
             ])
           ])
         ])
-      ]),
-
-      $el('div', {className: "block_copyright bg-$yellow h-50", flex: "center"}, [
-        $el('p', {className: "copyright_text", text: "14 light"}, [
-          "© GlenBob's Toy Learning"
-        ])
       ])
-
+  );
+})(),
+      (function () {
+  return (
+    $el('div', {className: "block_copyright bg-$yellow h-50", flex: "center"}, [
+      $el('p', {className: "copyright_text", text: "14 light"}, [
+        "© GlenBob's Toy Learning"
+      ])
     ])
   );
 })()

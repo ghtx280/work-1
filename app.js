@@ -36,35 +36,46 @@ const getDirectories = (source) =>
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name);
 
-const pages = ["index", "about"];
+
 
 let fsTimeout;
 
 async function run() {
   try {
+    const pages = fs.readdirSync("./src").filter(e => e[0] === "+")
+
     if (!fsTimeout) {
-      fs.rmSync("./dist/", { recursive: true, force: true });
+      // fs.rmSync("./dist/", { recursive: true, force: true });
 
-      if (!fs.existsSync("dist")) {
-        fs.mkdirSync("dist");
-      }
+      // if (!fs.existsSync("dist")) {
+      //   fs.mkdirSync("dist");
+      // }
 
-      for (const page of pages) {
-        const js = render(`src/+${page}.jsx`);
+      for (let page of pages) {
+        const js = render(`src/${page}`);
 
         if (!fs.existsSync("log")) {
           fs.mkdirSync("log");
         }
 
+        page = page.replace(/\+(.+)\.jsx/, "$1")
+
         fs.writeFileSync(`./log/${page}.js`, js);
 
         let html = Function("$el", "$data", `return ${js}()`)($el, { page });
+
+        // fs.rmSync("./dist/", { recursive: true, force: true });
+
+        if (!fs.existsSync("dist")) {
+          fs.mkdirSync("dist");
+        }
 
         fs.writeFileSync(
           `dist/${page}.html`,
           js_beautify.html(html.replace(/^\s+/gm, ""))
         );
       }
+      
 
       fs.cpSync("./static", "./dist/", { recursive: true });
 
@@ -85,7 +96,7 @@ async function run() {
       fsTimeout = setTimeout(() => (fsTimeout = null), 100);
     }
   } catch (error) {
-    console.log(error);
+    console.log(error + "");
   }
 }
 run();

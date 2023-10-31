@@ -65,7 +65,7 @@
           <ul className="m-lg:hide" flex="40" text="all:$blue semibold">
             <li>{Link("index", "Home")}</li>
             <li>{Link("about", "About")}</li>
-            <li>{Link("video", "Videos")}</li>
+            <li>{Link("videos", "Videos")}</li>
             <li>{Link("blog", "Blog")}</li>
             <li>{Link("contact", "Contact")}</li>
           </ul>

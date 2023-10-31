@@ -4,10 +4,18 @@
   return (
     <Html>
       <Header />
-      <AboutContent />
-      <Promo />
-      <LatestVideo />
+      <main>
+        <Latest
+          type="blog"
+          title="Latest Blog Posts"
+          btn={false}
+          count={12}
+          graph={["long"]}
+          card={<Blog />}
+        />
+      </main>
       <Footer />
+      <Copy />
     </Html>
   );
 });

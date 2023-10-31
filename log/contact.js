@@ -1,5 +1,9 @@
-(function () {
-  const times = (count) => Array.from("0".repeat(count));
+(function() {
+  const times = count => Array.from("0".repeat(count));
+
+  ;
+
+  // " "
 
   return (
     (function (prop, slot) {
@@ -151,216 +155,46 @@
     ])
   );
 })(),
+      $el('main', {className: "bg-#F1F9FD py-50 over-hidden"}, [
+        $el('div', {className: "container", flex: "center"}, [
+          $el('form', {action: "/send-contact.php", method: "POST"}, [
+            $el('div', {className: "bg-white max-w-480 p-60 graphics", flex: "32 col center"}, [
+              $el('h3', {className: "font_lilita", text: "30 #22A0D9 center"}, ["Contact GlenBob"]),
 
-      (function (prop = {}) {
+              $el('div', {flex: "17 col"}, [
+                $el('div', {className: "inp"}, [
+                  $el('input', {type: "text", placeholder: "*", required: true}),
+                  $el('label', null, ["First Name"])
+                ]),
 
-  prop.graph = prop.graph || [];
+                $el('div', {className: "inp"}, [
+                  $el('input', {type: "text", placeholder: "*", required: true}),
+                  $el('label', null, ["Last Name"])
+                ]),
 
+                $el('div', {className: "inp"}, [
+                  $el('input', {type: "email", placeholder: "*", required: true}),
+                  $el('label', null, ["Email"])
+                ]),
 
-  ;;
+                $el('div', {className: "inp"}, [
+                  $el('textarea', {placeholder: "*", required: true}),
+                  $el('label', null, ["Message"])
+                ]),
 
-  return (
-    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
-      $el('div', {
-        className:
-          "container graphics " + (prop.graph.map(e => `graphics_${e}` || "").join(" "))
-
-      }, [
-        $el('div', {flex: "30 lg:66 col"}, [
-          $el('h2', {
-            className: `latest_${prop.type}_title title_48`,
-            text: "m-lg:24"
-          }, [
-            prop.title
-          ]),
-
-          $el('div', {
-            className: `latest_${prop.type}_grid`,
-            grid: "50+30 md:cols-2 lg:cols-3"
-          }, [
-            times(prop.count).map(() => prop.card)
-          ]),
-
-          prop.btn ? (
-            $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
-              $el('a', {href: "#", className: "btn btn_pink"}, [
-                prop.btn
-              ])
-            ])
-          ) : (
-            $el('ul', {className: `pag`, flex: "8 center"}, [
-
-              [..."12345"].map((e) => (
-                $el('li', {className: "pag_item " + (e == 1 ? "pag_active" : "")}, [
-                  $el('a', {href: "#"}, [e])
+                $el('p', {text: "11 regular"}, [
+                  $el('strong', null, ["Glenbob"]),
+                  "needs the contact information you provide to us to contact you about our services. For information on how to unsubscribe, as well as our privacy practices, review our",
+                  $el('a', {href: "#"}, ["Privacy Policy"]),"."
                 ])
-              )),
 
-              $el('li', {className: "pag_item pag_arrow"}, [
-                $el('a', {href: "#"}, [
-                  $el('svg', {width: "15", height: "10", viewBox: "0 0 15 10", fill: "none", xmlns: "http://www.w3.org/2000/svg"}, [
-                    $el('path', {d: "M1 4.35C0.641015 4.35 0.35 4.64101 0.35 5C0.35 5.35899 0.641015 5.65 1 5.65L1 4.35ZM14.4596 5.45962C14.7135 5.20578 14.7135 4.79422 14.4596 4.54038L10.323 0.403806C10.0692 0.149965 9.65765 0.149965 9.40381 0.403806C9.14997 0.657647 9.14997 1.0692 9.40381 1.32304L13.0808 5L9.40381 8.67696C9.14997 8.9308 9.14997 9.34235 9.40381 9.59619C9.65765 9.85003 10.0692 9.85003 10.323 9.59619L14.4596 5.45962ZM1 5.65L14 5.65V4.35L1 4.35L1 5.65Z", fill: "black"})
-                  ])
-                ])
-              ])
+              ]),
+
+              $el('button', {className: "btn btn_green", type: "submit"}, ["Say Hello"])
             ])
-          )
-        ])
-      ])
-    ])
-  );
-})({type: "video",
-        title: "Latest Videos on YouTube",
-        btn: "Watch More Videos",
-        count: 9,
-        card: (function () {
-  ;
-
-  return (
-    $el('a', {
-      href: "#",
-      flex: "center",
-      className: "card_video ratio-16/9",
-      style: "background-image: url('./img/video.jpg')"
-    }, [
-      $el('img', {src: "./img/play.svg", alt: "Play Button"})
-    ])
-  );
-})()}
-      ),
-
-      (function () {
-  ;
-
-  return (
-    $el('div', {className: "block_promo clouds py-65"}, [
-      $el('div', {className: "container", flex: "20 lg:55 m-lg:col"}, [
-
-        $el('div', {className: "promo_img lg:h-360 shrink-0"}, [
-          (function (prop = {}) {
-  ;
-
-  return (
-    $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
-    src: "./img/hero.png", alt: "Hero image"})
-  );
-})()
-        ]),
-
-        $el('div', {className: "promo_divider w-1 bg-white"}),
-
-        $el('div', {className: "promo_text", flex: "35 col ai-s"}, [
-          $el('a', {href: "#", className: "h-50"}, [
-            (function (prop = {}) {
-  ;
-
-
-  return (
-    $el('img', {className:
-      "h-full" + (prop.className ? " " + prop.className : ""),
-    src: "./img/yt.svg", alt: "YouTube"})
-  );
-})()
-          ]),
-
-          $el('h2', {className: "font_lilita", text: "54 white"}, [
-            "Subscribe to GlenBob's Toy Learning on YouTube"
-          ]),
-
-          $el('p', {text: "20 white"}, [
-            "Join us as we explore the adventures of Numberblocks and the magic" + ' ' +
-            "of counting"
-          ]),
-
-          $el('a', {href: "#", className: "btn btn_yellow"}, [
-            "Subscribe Today"
           ])
         ])
-
-      ])
-    ])
-  );
-})(),
-
-      (function (prop = {}) {
-
-  prop.graph = prop.graph || [];
-
-
-  ;;
-
-  return (
-    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
-      $el('div', {
-        className:
-          "container graphics " + (prop.graph.map(e => `graphics_${e}` || "").join(" "))
-
-      }, [
-        $el('div', {flex: "30 lg:66 col"}, [
-          $el('h2', {
-            className: `latest_${prop.type}_title title_48`,
-            text: "m-lg:24"
-          }, [
-            prop.title
-          ]),
-
-          $el('div', {
-            className: `latest_${prop.type}_grid`,
-            grid: "50+30 md:cols-2 lg:cols-3"
-          }, [
-            times(prop.count).map(() => prop.card)
-          ]),
-
-          prop.btn ? (
-            $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
-              $el('a', {href: "#", className: "btn btn_pink"}, [
-                prop.btn
-              ])
-            ])
-          ) : (
-            $el('ul', {className: `pag`, flex: "8 center"}, [
-
-              [..."12345"].map((e) => (
-                $el('li', {className: "pag_item " + (e == 1 ? "pag_active" : "")}, [
-                  $el('a', {href: "#"}, [e])
-                ])
-              )),
-
-              $el('li', {className: "pag_item pag_arrow"}, [
-                $el('a', {href: "#"}, [
-                  $el('svg', {width: "15", height: "10", viewBox: "0 0 15 10", fill: "none", xmlns: "http://www.w3.org/2000/svg"}, [
-                    $el('path', {d: "M1 4.35C0.641015 4.35 0.35 4.64101 0.35 5C0.35 5.35899 0.641015 5.65 1 5.65L1 4.35ZM14.4596 5.45962C14.7135 5.20578 14.7135 4.79422 14.4596 4.54038L10.323 0.403806C10.0692 0.149965 9.65765 0.149965 9.40381 0.403806C9.14997 0.657647 9.14997 1.0692 9.40381 1.32304L13.0808 5L9.40381 8.67696C9.14997 8.9308 9.14997 9.34235 9.40381 9.59619C9.65765 9.85003 10.0692 9.85003 10.323 9.59619L14.4596 5.45962ZM1 5.65L14 5.65V4.35L1 4.35L1 5.65Z", fill: "black"})
-                  ])
-                ])
-              ])
-            ])
-          )
-        ])
-      ])
-    ])
-  );
-})({type: "blog",
-        title: "Latest Blog Posts",
-        btn: "Read More Blogs",
-        count: 6,
-        graph: ["invert"],
-        card: (function () {
-  ;
-
-  return (
-    $el('a', {href: "#", className: "card_blog r-16", flex: "col"}, [
-      $el('img', {className: "rt-16 h-230", src: "./img/video.jpg"}),
-
-      $el('p', {className: "rb-16 p-26+32 bg-white", text: "18 $black hover:#109FDA"}, [
-        "Improving staff productivity and turnaround with Digital Dictation and" + ' ' +
-        "Outsourced Transcription"
-      ])
-    ])
-  );
-})()}
-      ),
-
+      ]),
       (function () {
   ;
 

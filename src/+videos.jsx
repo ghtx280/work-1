@@ -4,10 +4,18 @@
   return (
     <Html>
       <Header />
-      <AboutContent />
-      <Promo />
-      <LatestVideo />
+      <main>
+        <Latest
+          type="video"
+          title="Latest Videos on YouTube"
+          btn="Load More Videos"
+          count={21}
+          graph={["long"]}
+          card={<Video />}
+        />
+      </main>
       <Footer />
+      <Copy />
     </Html>
   );
 });

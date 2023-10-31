@@ -12,9 +12,9 @@
         <div className="promo_divider w-1 bg-white" />
 
         <div className="promo_text" flex="35 col ai-s">
-          <div className="h-50">
+          <a href="#" className="h-50">
             <YouTube />
-          </div>
+          </a>
 
           <h2 className="font_lilita" text="54 white">
             Subscribe to GlenBob's Toy Learning on YouTube

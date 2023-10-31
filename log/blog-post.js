@@ -1,5 +1,5 @@
-(function () {
-  const times = (count) => Array.from("0".repeat(count));
+(function() {
+  const times = count => Array.from("0".repeat(count))
 
   return (
     (function (prop, slot) {
@@ -151,84 +151,37 @@
     ])
   );
 })(),
-
-      (function (prop = {}) {
-
-  prop.graph = prop.graph || [];
-
-
-  ;;
-
+      (function () {
   return (
-    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
-      $el('div', {
-        className:
-          "container graphics " + (prop.graph.map(e => `graphics_${e}` || "").join(" "))
+    $el('div', {className: "about_section pt-35 pb-80 over-hidden"}, [
 
-      }, [
-        $el('div', {flex: "30 lg:66 col"}, [
-          $el('h2', {
-            className: `latest_${prop.type}_title title_48`,
-            text: "m-lg:24"
-          }, [
-            prop.title
+      $el('div', {className: "container graphics graphics_invert", flex: "24 col"}, [
+
+        $el('h2', {className: "about_title title_40"}, [
+          "GlenBob’s Toy Learning"
+        ]),
+
+        $el('div', {className: "about_text", flex: "30", text: "all:18"}, [
+          $el('p', {className: "w-full"}, [
+            "Step into a universe where toys and education converge, igniting imagination and understanding in young enthusiasts. Dive deep into the world of Numberblocks, where counting becomes a thrilling journey, and numbers transform into vibrant characters.",
+            $el('br'),
+            $el('br'),
+            "Engage with hands-on learning as we play with Mathlink cubes, magnetic cubes, Numberblocks figures, and other educational toys that bridge fun and foundational skills vital for Pre-K and kindergarten."
           ]),
 
-          $el('div', {
-            className: `latest_${prop.type}_grid`,
-            grid: "50+30 md:cols-2 lg:cols-3"
-          }, [
-            times(prop.count).map(() => prop.card)
-          ]),
-
-          prop.btn ? (
-            $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
-              $el('a', {href: "#", className: "btn btn_pink"}, [
-                prop.btn
-              ])
-            ])
-          ) : (
-            $el('ul', {className: `pag`, flex: "8 center"}, [
-
-              [..."12345"].map((e) => (
-                $el('li', {className: "pag_item " + (e == 1 ? "pag_active" : "")}, [
-                  $el('a', {href: "#"}, [e])
-                ])
-              )),
-
-              $el('li', {className: "pag_item pag_arrow"}, [
-                $el('a', {href: "#"}, [
-                  $el('svg', {width: "15", height: "10", viewBox: "0 0 15 10", fill: "none", xmlns: "http://www.w3.org/2000/svg"}, [
-                    $el('path', {d: "M1 4.35C0.641015 4.35 0.35 4.64101 0.35 5C0.35 5.35899 0.641015 5.65 1 5.65L1 4.35ZM14.4596 5.45962C14.7135 5.20578 14.7135 4.79422 14.4596 4.54038L10.323 0.403806C10.0692 0.149965 9.65765 0.149965 9.40381 0.403806C9.14997 0.657647 9.14997 1.0692 9.40381 1.32304L13.0808 5L9.40381 8.67696C9.14997 8.9308 9.14997 9.34235 9.40381 9.59619C9.65765 9.85003 10.0692 9.85003 10.323 9.59619L14.4596 5.45962ZM1 5.65L14 5.65V4.35L1 4.35L1 5.65Z", fill: "black"})
-                  ])
-                ])
-              ])
-            ])
-          )
+          $el('p', {className: "w-full"}, [
+            "From exploring patterns, shapes, and basic maths to storytelling with Numberblocks and Alphablocks, our videos are meticulously crafted to foster both amusement and learning. Born from the heart of a parent who recognizes the significance of blending play with education, GlenBob's promises content that's kid-friendly, interactive, and always wholesome. Here, learning colors, spelling, reading, and even multiplication is an adventure!",
+            $el('br'),
+            $el('br'),
+            "GlenBob's is not just a channel – it's a vibrant community where educational content is delightful, kids are captivated, and parents find assurance in trusted learning resources."
+          ])
         ])
+
       ])
+
     ])
   );
-})({type: "video",
-        title: "Latest Videos on YouTube",
-        btn: "Watch More Videos",
-        count: 9,
-        card: (function () {
-  ;
-
-  return (
-    $el('a', {
-      href: "#",
-      flex: "center",
-      className: "card_video ratio-16/9",
-      style: "background-image: url('./img/video.jpg')"
-    }, [
-      $el('img', {src: "./img/play.svg", alt: "Play Button"})
-    ])
-  );
-})()}
-      ),
-
+})(),
       (function () {
   ;
 
@@ -282,85 +235,44 @@
     ])
   );
 })(),
+      (function () {
 
-      (function (prop = {}) {
-
-  prop.graph = prop.graph || [];
-
-
-  ;;
 
   return (
-    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
-      $el('div', {
-        className:
-          "container graphics " + (prop.graph.map(e => `graphics_${e}` || "").join(" "))
+    $el('div', {className: "block_latest_video py-30 lg:py-85 over-hidden"}, [
+      $el('div', {className: "container", flex: "30 lg:66 col"}, [
 
-      }, [
-        $el('div', {flex: "30 lg:66 col"}, [
-          $el('h2', {
-            className: `latest_${prop.type}_title title_48`,
-            text: "m-lg:24"
-          }, [
-            prop.title
-          ]),
+        $el('h2', {className: "latest_video_title font_lilita", text: "24 lg:48 $yellow center"}, [
+          "Latest Videos on YouTube"
+        ]),
 
-          $el('div', {
-            className: `latest_${prop.type}_grid`,
-            grid: "50+30 md:cols-2 lg:cols-3"
-          }, [
-            times(prop.count).map(() => prop.card)
-          ]),
-
-          prop.btn ? (
-            $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
-              $el('a', {href: "#", className: "btn btn_pink"}, [
-                prop.btn
-              ])
-            ])
-          ) : (
-            $el('ul', {className: `pag`, flex: "8 center"}, [
-
-              [..."12345"].map((e) => (
-                $el('li', {className: "pag_item " + (e == 1 ? "pag_active" : "")}, [
-                  $el('a', {href: "#"}, [e])
-                ])
-              )),
-
-              $el('li', {className: "pag_item pag_arrow"}, [
-                $el('a', {href: "#"}, [
-                  $el('svg', {width: "15", height: "10", viewBox: "0 0 15 10", fill: "none", xmlns: "http://www.w3.org/2000/svg"}, [
-                    $el('path', {d: "M1 4.35C0.641015 4.35 0.35 4.64101 0.35 5C0.35 5.35899 0.641015 5.65 1 5.65L1 4.35ZM14.4596 5.45962C14.7135 5.20578 14.7135 4.79422 14.4596 4.54038L10.323 0.403806C10.0692 0.149965 9.65765 0.149965 9.40381 0.403806C9.14997 0.657647 9.14997 1.0692 9.40381 1.32304L13.0808 5L9.40381 8.67696C9.14997 8.9308 9.14997 9.34235 9.40381 9.59619C9.65765 9.85003 10.0692 9.85003 10.323 9.59619L14.4596 5.45962ZM1 5.65L14 5.65V4.35L1 4.35L1 5.65Z", fill: "black"})
-                  ])
-                ])
-              ])
-            ])
-          )
-        ])
-      ])
-    ])
-  );
-})({type: "blog",
-        title: "Latest Blog Posts",
-        btn: "Read More Blogs",
-        count: 6,
-        graph: ["invert"],
-        card: (function () {
+        $el('div', {className: "latest_video_grid", grid: "50+30 md:cols-2 lg:cols-3"}, [
+          times(9).map(() => (function () {
   ;
 
   return (
-    $el('a', {href: "#", className: "card_blog r-16", flex: "col"}, [
-      $el('img', {className: "rt-16 h-230", src: "./img/video.jpg"}),
+    $el('a', {
+      href: "#",
+      flex: "center",
+      className: "card_video ratio-16/9",
+      style: "background-image: url('./img/video.jpg')"
+    }, [
+      $el('img', {src: "./img/play.svg", alt: "Play Button"})
+    ])
+  );
+})())
+        ]),
 
-      $el('p', {className: "rb-16 p-26+32 bg-white", text: "18 $black hover:#109FDA"}, [
-        "Improving staff productivity and turnaround with Digital Dictation and" + ' ' +
-        "Outsourced Transcription"
+        $el('div', {className: "latest_video_btn", flex: "center"}, [
+          $el('a', {href: "#", className: "btn btn_pink my-auto"}, [
+            "Watch More Videos"
+          ])
+        ])
+
       ])
     ])
   );
-})()}
-      ),
-
+})(),
       (function () {
   ;
 
