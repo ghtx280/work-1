@@ -13,14 +13,14 @@
 
   function Title(text, cls = "") {
     return (
-      <h3 className={"font_lilita mb-15 " + cls} text="20 $black">
+      <h3 className={cls + " font_lilita mb-15"} text="20 $black">
         {text}
       </h3>
     );
   }
 
   return (
-      <footer className="clouds py-50">
+      <footer className="block_footer clouds py-50">
         <div className="container" flex="50 lg:130 space ai-s m-lg:col">
           
           <div className="info_section" flex="20 col ai-s">

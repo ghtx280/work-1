@@ -4,7 +4,7 @@
 
 
   ;<style jsx>{`
-    .pag_item {
+    .pag_item a {
       width: 32px;
       height: 32px;
       border-width: 1px;
@@ -13,13 +13,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      
-    }
-
-    .pag_item a {
       color: var(--black);
     }
-    .pag_item.pag_active {
+
+    .pag_item.pag_active a,
+    .pag_item:hover a {
       background-color: var(--pink);
     }
   `}</style>;

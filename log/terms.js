@@ -1,5 +1,7 @@
 (function() {
-  const times = count => Array.from("0".repeat(count))
+  const times = count => Array.from("0".repeat(count));
+
+
 
   return (
     (function (prop, slot) {
@@ -79,7 +81,7 @@
           $el('img', {src: "img/logo.png", alt: "Logo"})
         ]),
 
-        $el('nav', {className: "nav_list bg-$white p-15+30 round all:time-100"}, [
+        $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
 
           $el('div', {className: "burger flex lg:hide", text: "hover:all:$red", onclick:
             /*js*/`this.classList.toggle('active')`
@@ -87,7 +89,7 @@
             $el('span')," ", $el('span')," ", $el('span')
           ]),
 
-          $el('ul', {className: "m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
+          $el('ul', {className: "nav_list m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
             $el('li', null, [Link("index", "Home")]),
             $el('li', null, [Link("about", "About")]),
             $el('li', null, [Link("videos", "Videos")]),
@@ -151,128 +153,71 @@
     ])
   );
 })(),
-      (function () {
-  return (
-    $el('div', {className: "about_section pt-35 pb-80 over-hidden"}, [
-
-      $el('div', {className: "container graphics graphics_invert", flex: "24 col"}, [
-
-        $el('h2', {className: "about_title title_40"}, [
-          "GlenBob’s Toy Learning"
-        ]),
-
-        $el('div', {className: "about_text", flex: "30", text: "all:18"}, [
-          $el('p', {className: "w-full"}, [
-            "Step into a universe where toys and education converge, igniting imagination and understanding in young enthusiasts. Dive deep into the world of Numberblocks, where counting becomes a thrilling journey, and numbers transform into vibrant characters.",
-            $el('br'),
-            $el('br'),
-            "Engage with hands-on learning as we play with Mathlink cubes, magnetic cubes, Numberblocks figures, and other educational toys that bridge fun and foundational skills vital for Pre-K and kindergarten."
-          ]),
-
-          $el('p', {className: "w-full"}, [
-            "From exploring patterns, shapes, and basic maths to storytelling with Numberblocks and Alphablocks, our videos are meticulously crafted to foster both amusement and learning. Born from the heart of a parent who recognizes the significance of blending play with education, GlenBob's promises content that's kid-friendly, interactive, and always wholesome. Here, learning colors, spelling, reading, and even multiplication is an adventure!",
-            $el('br'),
-            $el('br'),
-            "GlenBob's is not just a channel – it's a vibrant community where educational content is delightful, kids are captivated, and parents find assurance in trusted learning resources."
+      $el('main', null, [
+        $el('div', {className: "block_post py-60 over-hidden"}, [
+          $el('div', {className: "container graphics graphics_long"}, [
+            $el('h1', {className: "title_48 mb-54"}, [" Terms of Use "]),
+            $el('div', {className: "post_content marked"}, [
+              $el('p', null, [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at sem a sem congue consectetur nec at mauris. Aliquam ut erat et ante bibendum pulvinar id quis enim. Nunc at ante et turpis placerat laoreet sit amet id libero. ", $el('strong', null, ["Aliquam euismod"])," ornare laoreet. Donec neque sapien, convallis sit amet porta et, tincidunt sit amet neque. Suspendisse maximus tortor sit"
+              ]),
+              $el('p', null, [
+                "amet ipsum fringilla vulputate. Cras interdum lacus in tortor rhoncus, nec eleifend felis facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ", $el('a', {href: "#"}, ["ultrices posuere"])," cubilia curae; Integer non odio non nisi eleifend sodales id sit amet risus. In vestibulum dignissim metus varius blandit. In hac habitasse platea dictumst. Proin vel turpis eget lectus venenatis sodales. Phasellus scelerisque non elit quis lacinia. Nullam magna ex, mollis at leo id, commodo blandit dolor. Etiam eu lobortis diam. Nulla hendrerit ipsum et turpis tincidunt, blandit interdum mauris mattis."
+              ]),
+              $el('h2', null, [
+                "H2 - Cras pellentesque urna a lacus vulputate feugiat"
+              ]),
+              $el('p', null, [
+                "Integer tempus, mi vel lacinia volutpat, quam nulla vulputate felis, a mattis diam libero eget diam. Donec at mollis augue. Vestibulum ut scelerisque arcu, ut ornare nibh. Quisque id quam tellus. Curabitur ac consequat metus, sed porta justo. Praesent ullamcorper neque viverra congue feugiat. Sed dignissim vitae mi at molestie. Nulla nisl nulla, lobortis ac dolor a, hendrerit lacinia magna. Nulla feugiat tincidunt nunc, a mollis metus tincidunt eu. Maecenas augue"
+              ]),
+              $el('p', null, [
+                "sapien, luctus at feugiat a, convallis et magna. Fusce lobortis ipsum ut dolor imperdiet dapibus. Curabitur molestie aliquet tincidunt. Donec maximus non dolor quis mollis. Proin enim justo, ultrices ut ornare vitae, tincidunt in lorem. Donec pulvinar felis vel venenatis tempor. Ut consectetur, eros at bibendum consectetur, massa nibh facilisis magna, id hendrerit dolor augue eget felis."
+              ]),
+              $el('ol', null, [
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"])
+              ]),
+              $el('h3', null, ["H3 - Cras pellentesque urna a lacus vulputate feugiat"]),
+              $el('p', null, [
+                "Cras ex ante, malesuada non enim sed, sagittis finibus lacus. Praesent congue mollis tellus vel auctor. Cras pharetra elit ex, nec imperdiet velit dignissim et. Cras id lorem ac nunc mattis mattis. Vivamus iaculis arcu interdum erat rhoncus fringilla. Cras tristique tristique magna id pellentesque. Praesent mattis felis sed dui dignissim molestie. Donec sit amet sapien odio. Integer accumsan enim sem, blandit aliquet dui mollis vel. Integer lacinia imperdiet purus sed venenatis. Etiam non enim metus."
+              ]),
+              $el('h4', null, ["H4 - Cras pellentesque urna a lacus vulputate feugiat"]),
+              $el('p', null, [
+                "Donec ornare, libero ut vestibulum ullamcorper, velit odio rhoncus nunc, vel convallis ante eros ac urna. Nam sed leo sit amet risus tristique sagittis eget a ipsum. Pellentesque cursus turpis in imperdiet luctus. Vivamus convallis, urna eu mattis elementum, metus purus dictum erat, vel auctor urna sapien at tellus. Donec ornare semper nunc quis lobortis. Morbi imperdiet dictum"
+              ]),
+              $el('p', null, [
+                "lobortis. Integer accumsan, odio ut finibus ullamcorper, lorem nunc consequat purus, non molestie mauris diam in nibh. Quisque quis hendrerit risus. Integer erat nibh, viverra ac elit et, porttitor scelerisque erat. Nunc at consectetur sapien. Nulla facilisi."
+              ]),
+              $el('h5', null, [
+                "H5 - Cras pellentesque urna a lacus vulputate feugiat"
+              ]),
+              $el('p', null, [
+                "Morbi elementum efficitur nibh, ut accumsan augue consequat quis. Sed ultrices nisl quis lacus iaculis, at dignissim ante rhoncus. Vivamus a lectus feugiat, ornare metus vitae, posuere ex. Curabitur urna risus, sollicitudin ac sollicitudin eu, aliquet a tortor. Fusce finibus nisl eu odio"
+              ]),
+              $el('p', null, [
+                "volutpat posuere. Etiam eu sagittis eros, vel fermentum purus. Nulla faucibus sagittis lacinia. In accumsan neque cursus maximus elementum. Vestibulum est odio, tristique ac dolor id, rutrum varius erat. In pulvinar vestibulum lacu."
+              ]),
+              $el('h6', null, ["H6- Cras pellentesque urna a lacus vulputate feugiat"]),
+              $el('p', null, [
+                "Sed eu pulvinar quam. Aliquam mi nunc, aliquet eu lacus in, interdum rutrum enim. Praesent id est et est porta gravida id sollicitudin ex. In sed quam eget nulla pharetra lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In id eros vitae neque condimentum."
+              ]),
+              $el('ul', null, [
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"])
+              ]),
+              $el('p', null, [
+                "Vivamus vulputate nisl ut eleifend tempus. Praesent interdum vulputate lorem at lacinia. Sed nulla dui, bibendum sit amet augue et, facilisis pulvinar magna. Curabitur tempus"
+              ])
+            ])
           ])
         ])
-
-      ])
-
-    ])
-  );
-})(),
-      (function () {
-  ;
-
-  return (
-    $el('div', {className: "block_promo clouds py-65"}, [
-      $el('div', {className: "container", flex: "20 lg:55 m-lg:col"}, [
-
-        $el('div', {className: "promo_img lg:h-360 shrink-0"}, [
-          (function (prop = {}) {
-  ;
-
-  return (
-    $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
-    src: "./img/hero.png", alt: "Hero image"})
-  );
-})()
-        ]),
-
-        $el('div', {className: "promo_divider w-1 bg-white"}),
-
-        $el('div', {className: "promo_text", flex: "35 col ai-s"}, [
-          $el('a', {href: "#", className: "h-50"}, [
-            (function (prop = {}) {
-  ;
-
-
-  return (
-    $el('img', {className:
-      "h-full" + (prop.className ? " " + prop.className : ""),
-    src: "./img/yt.svg", alt: "YouTube"})
-  );
-})()
-          ]),
-
-          $el('h2', {className: "font_lilita", text: "54 white"}, [
-            "Subscribe to GlenBob's Toy Learning on YouTube"
-          ]),
-
-          $el('p', {text: "20 white"}, [
-            "Join us as we explore the adventures of Numberblocks and the magic" + ' ' +
-            "of counting"
-          ]),
-
-          $el('a', {href: "#", className: "btn btn_yellow"}, [
-            "Subscribe Today"
-          ])
-        ])
-
-      ])
-    ])
-  );
-})(),
-      (function () {
-
-
-  return (
-    $el('div', {className: "block_latest_video py-30 lg:py-85 over-hidden"}, [
-      $el('div', {className: "container", flex: "30 lg:66 col"}, [
-
-        $el('h2', {className: "latest_video_title font_lilita", text: "24 lg:48 $yellow center"}, [
-          "Latest Videos on YouTube"
-        ]),
-
-        $el('div', {className: "latest_video_grid", grid: "50+30 md:cols-2 lg:cols-3"}, [
-          times(9).map(() => (function () {
-  ;
-
-  return (
-    $el('a', {
-      href: "#",
-      flex: "center",
-      className: "card_video ratio-16/9",
-      style: "background-image: url('./img/video.jpg')"
-    }, [
-      $el('img', {src: "./img/play.svg", alt: "Play Button"})
-    ])
-  );
-})())
-        ]),
-
-        $el('div', {className: "latest_video_btn", flex: "center"}, [
-          $el('a', {href: "#", className: "btn btn_pink my-auto"}, [
-            "Watch More Videos"
-          ])
-        ])
-
-      ])
-    ])
-  );
-})(),
+      ]),
       (function () {
   ;
 
@@ -288,14 +233,14 @@
 
   function Title(text, cls = "") {
     return (
-      $el('h3', {className: "font_lilita mb-15 " + cls, text: "20 $black"}, [
+      $el('h3', {className: cls + " font_lilita mb-15", text: "20 $black"}, [
         text
       ])
     );
   }
 
   return (
-      $el('footer', {className: "clouds py-50"}, [
+      $el('footer', {className: "block_footer clouds py-50"}, [
         $el('div', {className: "container", flex: "50 lg:130 space ai-s m-lg:col"}, [
 
           $el('div', {className: "info_section", flex: "20 col ai-s"}, [

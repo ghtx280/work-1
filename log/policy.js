@@ -1,5 +1,7 @@
 (function() {
-  const times = count => Array.from("0".repeat(count))
+  const times = count => Array.from("0".repeat(count));
+
+
 
   return (
     (function (prop, slot) {
@@ -152,83 +154,69 @@
   );
 })(),
       $el('main', null, [
-        (function (prop = {}) {
-
-  prop.graph = prop.graph || [];
-
-
-  ;;
-
-  return (
-    $el('div', {className: `block_latest_${prop.type} py-30 lg:py-85 over-hidden`}, [
-      $el('div', {
-        className:
-          "container graphics " + (prop.graph.map(e => `graphics_${e}` || "").join(" "))
-
-      }, [
-        $el('div', {flex: "30 lg:66 col"}, [
-          $el('h2', {
-            className: `latest_${prop.type}_title title_48`,
-            text: "m-lg:24"
-          }, [
-            prop.title
-          ]),
-
-          $el('div', {
-            className: `latest_${prop.type}_grid`,
-            grid: "50+30 md:cols-2 lg:cols-3"
-          }, [
-            times(prop.count).map(() => prop.card)
-          ]),
-
-          prop.btn ? (
-            $el('div', {className: `latest_${prop.type}_btn`, flex: "center"}, [
-              $el('a', {href: "#", className: "btn btn_pink"}, [
-                prop.btn
+        $el('div', {className: "block_post py-60 over-hidden"}, [
+          $el('div', {className: "container graphics graphics_long"}, [
+            $el('h1', {className: "title_48 mb-54"}, [" Privacy Policy "]),
+            $el('div', {className: "post_content marked"}, [
+              $el('p', null, [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at sem a sem congue consectetur nec at mauris. Aliquam ut erat et ante bibendum pulvinar id quis enim. Nunc at ante et turpis placerat laoreet sit amet id libero. ", $el('strong', null, ["Aliquam euismod"])," ornare laoreet. Donec neque sapien, convallis sit amet porta et, tincidunt sit amet neque. Suspendisse maximus tortor sit"
+              ]),
+              $el('p', null, [
+                "amet ipsum fringilla vulputate. Cras interdum lacus in tortor rhoncus, nec eleifend felis facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ", $el('a', {href: "#"}, ["ultrices posuere"])," cubilia curae; Integer non odio non nisi eleifend sodales id sit amet risus. In vestibulum dignissim metus varius blandit. In hac habitasse platea dictumst. Proin vel turpis eget lectus venenatis sodales. Phasellus scelerisque non elit quis lacinia. Nullam magna ex, mollis at leo id, commodo blandit dolor. Etiam eu lobortis diam. Nulla hendrerit ipsum et turpis tincidunt, blandit interdum mauris mattis."
+              ]),
+              $el('h2', null, [
+                "H2 - Cras pellentesque urna a lacus vulputate feugiat"
+              ]),
+              $el('p', null, [
+                "Integer tempus, mi vel lacinia volutpat, quam nulla vulputate felis, a mattis diam libero eget diam. Donec at mollis augue. Vestibulum ut scelerisque arcu, ut ornare nibh. Quisque id quam tellus. Curabitur ac consequat metus, sed porta justo. Praesent ullamcorper neque viverra congue feugiat. Sed dignissim vitae mi at molestie. Nulla nisl nulla, lobortis ac dolor a, hendrerit lacinia magna. Nulla feugiat tincidunt nunc, a mollis metus tincidunt eu. Maecenas augue"
+              ]),
+              $el('p', null, [
+                "sapien, luctus at feugiat a, convallis et magna. Fusce lobortis ipsum ut dolor imperdiet dapibus. Curabitur molestie aliquet tincidunt. Donec maximus non dolor quis mollis. Proin enim justo, ultrices ut ornare vitae, tincidunt in lorem. Donec pulvinar felis vel venenatis tempor. Ut consectetur, eros at bibendum consectetur, massa nibh facilisis magna, id hendrerit dolor augue eget felis."
+              ]),
+              $el('ol', null, [
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet"])
+              ]),
+              $el('h3', null, ["H3 - Cras pellentesque urna a lacus vulputate feugiat"]),
+              $el('p', null, [
+                "Cras ex ante, malesuada non enim sed, sagittis finibus lacus. Praesent congue mollis tellus vel auctor. Cras pharetra elit ex, nec imperdiet velit dignissim et. Cras id lorem ac nunc mattis mattis. Vivamus iaculis arcu interdum erat rhoncus fringilla. Cras tristique tristique magna id pellentesque. Praesent mattis felis sed dui dignissim molestie. Donec sit amet sapien odio. Integer accumsan enim sem, blandit aliquet dui mollis vel. Integer lacinia imperdiet purus sed venenatis. Etiam non enim metus."
+              ]),
+              $el('h4', null, ["H4 - Cras pellentesque urna a lacus vulputate feugiat"]),
+              $el('p', null, [
+                "Donec ornare, libero ut vestibulum ullamcorper, velit odio rhoncus nunc, vel convallis ante eros ac urna. Nam sed leo sit amet risus tristique sagittis eget a ipsum. Pellentesque cursus turpis in imperdiet luctus. Vivamus convallis, urna eu mattis elementum, metus purus dictum erat, vel auctor urna sapien at tellus. Donec ornare semper nunc quis lobortis. Morbi imperdiet dictum"
+              ]),
+              $el('p', null, [
+                "lobortis. Integer accumsan, odio ut finibus ullamcorper, lorem nunc consequat purus, non molestie mauris diam in nibh. Quisque quis hendrerit risus. Integer erat nibh, viverra ac elit et, porttitor scelerisque erat. Nunc at consectetur sapien. Nulla facilisi."
+              ]),
+              $el('h5', null, [
+                "H5 - Cras pellentesque urna a lacus vulputate feugiat"
+              ]),
+              $el('p', null, [
+                "Morbi elementum efficitur nibh, ut accumsan augue consequat quis. Sed ultrices nisl quis lacus iaculis, at dignissim ante rhoncus. Vivamus a lectus feugiat, ornare metus vitae, posuere ex. Curabitur urna risus, sollicitudin ac sollicitudin eu, aliquet a tortor. Fusce finibus nisl eu odio"
+              ]),
+              $el('p', null, [
+                "volutpat posuere. Etiam eu sagittis eros, vel fermentum purus. Nulla faucibus sagittis lacinia. In accumsan neque cursus maximus elementum. Vestibulum est odio, tristique ac dolor id, rutrum varius erat. In pulvinar vestibulum lacu."
+              ]),
+              $el('h6', null, ["H6- Cras pellentesque urna a lacus vulputate feugiat"]),
+              $el('p', null, [
+                "Sed eu pulvinar quam. Aliquam mi nunc, aliquet eu lacus in, interdum rutrum enim. Praesent id est et est porta gravida id sollicitudin ex. In sed quam eget nulla pharetra lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In id eros vitae neque condimentum."
+              ]),
+              $el('ul', null, [
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"]),
+                $el('li', null, ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?"])
+              ]),
+              $el('p', null, [
+                "Vivamus vulputate nisl ut eleifend tempus. Praesent interdum vulputate lorem at lacinia. Sed nulla dui, bibendum sit amet augue et, facilisis pulvinar magna. Curabitur tempus"
               ])
             ])
-          ) : (
-            $el('ul', {className: `pag`, flex: "8 center"}, [
-
-              [..."12345"].map((e) => (
-                $el('li', {className: "pag_item " + (e == 1 ? "pag_active" : "")}, [
-                  $el('a', {href: "#"}, [e])
-                ])
-              )),
-
-              $el('li', {className: "pag_item pag_arrow"}, [
-                $el('a', {href: "#"}, [
-                  $el('svg', {width: "15", height: "10", viewBox: "0 0 15 10", fill: "none", xmlns: "http://www.w3.org/2000/svg"}, [
-                    $el('path', {d: "M1 4.35C0.641015 4.35 0.35 4.64101 0.35 5C0.35 5.35899 0.641015 5.65 1 5.65L1 4.35ZM14.4596 5.45962C14.7135 5.20578 14.7135 4.79422 14.4596 4.54038L10.323 0.403806C10.0692 0.149965 9.65765 0.149965 9.40381 0.403806C9.14997 0.657647 9.14997 1.0692 9.40381 1.32304L13.0808 5L9.40381 8.67696C9.14997 8.9308 9.14997 9.34235 9.40381 9.59619C9.65765 9.85003 10.0692 9.85003 10.323 9.59619L14.4596 5.45962ZM1 5.65L14 5.65V4.35L1 4.35L1 5.65Z", fill: "black"})
-                  ])
-                ])
-              ])
-            ])
-          )
+          ])
         ])
-      ])
-    ])
-  );
-})({type: "video",
-          title: "Latest Videos on YouTube",
-          btn: "Load More Videos",
-          count: 21,
-          graph: ["long"],
-          card: (function () {
-  ;
-
-  return (
-    $el('a', {
-      className: "card_video ratio-16/9",
-      href: "#",
-      flex: "center",
-      style: "background-image: url('./img/video.jpg')"
-    }, [
-      $el('img', {src: "./img/play.svg", alt: "Play Button"})
-    ])
-  );
-})()}
-        )
       ]),
       (function () {
   ;

@@ -54,7 +54,7 @@
           <img src="img/logo.png" alt="Logo" />
         </a>
 
-        <nav className="nav_list bg-$white p-15+30 round all:time-100">
+        <nav className="bg-$white p-15+30 round all:time-100">
 
           <div className="burger flex lg:hide" text="hover:all:$red" onclick={
             /*js*/`this.classList.toggle('active')`
@@ -62,7 +62,7 @@
             <span /> <span /> <span />
           </div>
 
-          <ul className="m-lg:hide" flex="40" text="all:$blue semibold">
+          <ul className="nav_list m-lg:hide" flex="40" text="all:$blue semibold">
             <li>{Link("index", "Home")}</li>
             <li>{Link("about", "About")}</li>
             <li>{Link("videos", "Videos")}</li>

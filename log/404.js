@@ -83,7 +83,7 @@
           $el('img', {src: "img/logo.png", alt: "Logo"})
         ]),
 
-        $el('nav', {className: "nav_list bg-$white p-15+30 round all:time-100"}, [
+        $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
 
           $el('div', {className: "burger flex lg:hide", text: "hover:all:$red", onclick:
             /*js*/`this.classList.toggle('active')`
@@ -91,7 +91,7 @@
             $el('span')," ", $el('span')," ", $el('span')
           ]),
 
-          $el('ul', {className: "m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
+          $el('ul', {className: "nav_list m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
             $el('li', null, [Link("index", "Home")]),
             $el('li', null, [Link("about", "About")]),
             $el('li', null, [Link("videos", "Videos")]),

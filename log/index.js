@@ -79,7 +79,7 @@
           $el('img', {src: "img/logo.png", alt: "Logo"})
         ]),
 
-        $el('nav', {className: "nav_list bg-$white p-15+30 round all:time-100"}, [
+        $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
 
           $el('div', {className: "burger flex lg:hide", text: "hover:all:$red", onclick:
             /*js*/`this.classList.toggle('active')`
@@ -87,7 +87,7 @@
             $el('span')," ", $el('span')," ", $el('span')
           ]),
 
-          $el('ul', {className: "m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
+          $el('ul', {className: "nav_list m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
             $el('li', null, [Link("index", "Home")]),
             $el('li', null, [Link("about", "About")]),
             $el('li', null, [Link("videos", "Videos")]),
@@ -218,9 +218,9 @@
 
   return (
     $el('a', {
+      className: "card_video ratio-16/9",
       href: "#",
       flex: "center",
-      className: "card_video ratio-16/9",
       style: "background-image: url('./img/video.jpg')"
     }, [
       $el('img', {src: "./img/play.svg", alt: "Play Button"})
@@ -376,14 +376,14 @@
 
   function Title(text, cls = "") {
     return (
-      $el('h3', {className: "font_lilita mb-15 " + cls, text: "20 $black"}, [
+      $el('h3', {className: cls + " font_lilita mb-15", text: "20 $black"}, [
         text
       ])
     );
   }
 
   return (
-      $el('footer', {className: "clouds py-50"}, [
+      $el('footer', {className: "block_footer clouds py-50"}, [
         $el('div', {className: "container", flex: "50 lg:130 space ai-s m-lg:col"}, [
 
           $el('div', {className: "info_section", flex: "20 col ai-s"}, [

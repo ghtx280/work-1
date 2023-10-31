@@ -160,21 +160,85 @@ form>div {
     color: var(--blue);
     width: 100%;
     height: 3.2px;
+    position: relative;
     background-color: currentColor;
     transition: all .3s
 }
 
 .pag_item a {
+    width: 32px;
+    height: 32px;
+    border-width: 1px;
+    border-color: var(--pink);
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--black)
 }
 
-.burger span,
+.pag_item.pag_active a,
+.pag_item:hover a {
+    background-color: var(--pink)
+}
+
+.block_post .card_video img {
+    height: 80px
+}
+
+.marked p {
+    line-height: 24px
+}
+
+.marked ol {
+    list-style: inside decimal
+}
+
+.marked ul {
+    list-style: inside disc
+}
+
+.marked :is(ol, ul) li {
+    list-style: unset
+}
+
 .inp {
     position: relative
 }
 
 .card_blog {
     box-shadow: 0 6px 20px rgba(160, 180, 200, .4)
+}
+
+.marked>* {
+    margin-bottom: 15px;
+    font-size: 16px
+}
+
+.marked h1,
+.marked h2,
+.marked h3,
+.marked h4,
+.marked h5,
+.marked h6 {
+    font-family: var(--font-lilita);
+    color: var(--color-yellow)
+}
+
+.marked h3,
+.marked h4,
+.marked h5,
+.marked h6 {
+    font-size: 20px
+}
+
+.marked h1 {
+    font-size: 30px;
+    padding-top: 20px
+}
+
+.marked h2 {
+    font-size: 24px
 }
 
 .hero_title {
@@ -225,21 +289,6 @@ form>div {
 
 .burger.active span:nth-of-type(3) {
     transform: translateY(-100%) rotate(-45deg)
-}
-
-.pag_item {
-    width: 32px;
-    height: 32px;
-    border-width: 1px;
-    border-color: var(--pink);
-    border-radius: 99px;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.pag_item.pag_active {
-    background-color: var(--pink)
 }
 
 .card_video {

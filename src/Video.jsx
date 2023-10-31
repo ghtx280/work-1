@@ -12,9 +12,9 @@
 
   return (
     <a
+      className="card_video ratio-16/9"
       href="#"
       flex="center"
-      className="card_video ratio-16/9"
       style="background-image: url('./img/video.jpg')"
     >
       <img src="./img/play.svg" alt="Play Button" />
