@@ -3,12 +3,16 @@
   <style jsx>{`
   
   .burger {
+    position: relative;
+
     width: 24px;
     height: 24px;
 
     flex-direction: column;
     justify-content: center;
     gap: 3.2px;
+
+    z-index: 99;
   }
   
   .burger span {
@@ -32,6 +36,21 @@
     transform: translateY(-100%) rotate(-45deg); 
   }
 
+  @media (max-width: 992px) {
+    .nav_list {
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+  }
   
   
   `}</style>
@@ -57,13 +76,11 @@
 
         <nav className="bg-$white p-15+30 round all:time-100">
 
-          <div className="burger flex lg:hide" text="hover:all:$red" onclick={
-            /*js*/`this.classList.toggle('active')`
-          }>
+          <div className="burger flex lg:hide">
             <span /> <span /> <span />
           </div>
 
-          <ul className="nav_list m-lg:hide" flex="40" text="all:$blue semibold">
+          <ul className="nav_list" flex="40" text="all:$blue semibold">
             <li>{Link("index", "Home")}</li>
             <li>{Link("about", "About")}</li>
             <li>{Link("videos", "Videos")}</li>

@@ -38,7 +38,25 @@
             rel="stylesheet"
           />
         </head>
-        <body>{slot}</body>
+        <body>
+          {slot}
+          <script>{/*js*/`
+            const btn = document.querySelector('.burger');
+            const nav_list = document.querySelector(".nav_list");
+
+            btn.addEventListener("click", () => {
+              if (btn.classList.toggle("active")) {
+                document.body.style.overflow = "hidden";
+                nav_list.style.left = "0vw"
+              }
+              else {
+                document.body.style.overflow = "";
+                nav_list.style.left = "-100vw"
+              }
+            })
+          `}</script>
+        </body>
+        
       </html>
     </template>
   );

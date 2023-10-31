@@ -42,7 +42,25 @@
             rel: "stylesheet"}
           )
         ]),
-        $el('body', null, [slot])
+        $el('body', null, [
+          slot,
+          $el('script', null, [/*js*/`
+            const btn = document.querySelector('.burger');
+            const nav_list = document.querySelector(".nav_list");
+
+            btn.addEventListener("click", () => {
+              if (btn.classList.toggle("active")) {
+                document.body.style.overflow = "hidden";
+                nav_list.style.left = "0vw"
+              }
+              else {
+                document.body.style.overflow = "";
+                nav_list.style.left = "-100vw"
+              }
+            })
+          `])
+        ])
+
       ])
     ])
   );
@@ -81,13 +99,11 @@
 
         $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
 
-          $el('div', {className: "burger flex lg:hide", text: "hover:all:$red", onclick:
-            /*js*/`this.classList.toggle('active')`
-          }, [
+          $el('div', {className: "burger flex lg:hide"}, [
             $el('span')," ", $el('span')," ", $el('span')
           ]),
 
-          $el('ul', {className: "nav_list m-lg:hide", flex: "40", text: "all:$blue semibold"}, [
+          $el('ul', {className: "nav_list", flex: "40", text: "all:$blue semibold"}, [
             $el('li', null, [Link("index", "Home")]),
             $el('li', null, [Link("about", "About")]),
             $el('li', null, [Link("videos", "Videos")]),

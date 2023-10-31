@@ -64,12 +64,12 @@
                     <img src="img/logo.png" alt="Logo" />
                 </a>
                 <nav class="bg-$white p-15+30 round all:time-100">
-                    <div class="burger flex lg:hide" text="hover:all:$red" onclick="this.classList.toggle('active')">
+                    <div class="burger flex lg:hide">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                    <ul class="nav_list m-lg:hide" flex="40" text="all:$blue semibold">
+                    <ul class="nav_list" flex="40" text="all:$blue semibold">
                         <li>
                             <a class="nav_item nav_active" text="hover:$red" href="index.html">Home</a>
                         </li>
@@ -259,6 +259,19 @@
     <div class="block_copyright bg-$yellow h-50" flex="center">
         <p class="copyright_text" text="14 light">© GlenBob's Toy Learning</p>
     </div>
+    <script>
+        const btn = document.querySelector('.burger');
+        const nav_list = document.querySelector(".nav_list");
+        btn.addEventListener("click", () => {
+            if (btn.classList.toggle("active")) {
+                document.body.style.overflow = "hidden";
+                nav_list.style.left = "0vw"
+            } else {
+                document.body.style.overflow = "";
+                nav_list.style.left = "-100vw"
+            }
+        })
+    </script>
 </body>
 
 </html>
