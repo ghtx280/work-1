@@ -16,7 +16,7 @@
             <YouTube />
           </a>
 
-          <h2 className="font_lilita spacing-0" text="54 white">
+          <h2 className="font_lilita spacing-0" text="40 lg:54 white">
             Subscribe to GlenBob's Toy Learning on YouTube
           </h2>
 
