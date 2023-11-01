@@ -44,9 +44,9 @@
     <Html>
       <Header />
       <main>
-        <div className="block_post py-60 over-hidden">
+        <div className="block_post py-55 lg:py-85 over-hidden">
           <div className="container graphics graphics_long">
-            <h1 className="title_48 mb-54"> Terms of Use </h1>
+            <h1 className="title_48 mb-55"> Terms of Use </h1>
             <div className="post_content marked">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at sem a sem congue consectetur nec at mauris. Aliquam ut erat et ante bibendum pulvinar id quis enim. Nunc at ante et turpis placerat laoreet sit amet id libero. <strong>Aliquam euismod</strong> ornare laoreet. Donec neque sapien, convallis sit amet porta et, tincidunt sit amet neque. Suspendisse maximus tortor sit 

@@ -14,6 +14,7 @@
       justify-content: center;
       align-items: center;
       color: var(--black);
+      transition: all 200ms;
     }
 
     .pag_item.pag_active a,

@@ -96,22 +96,24 @@
 
   return (
     $el('div', {className: "container"}, [
-      $el('div', {className: "nav_section pt-25", flex: "space"}, [
+      $el('div', {className: "nav_section pt-16", flex: "space"}, [
         $el('a', {href: "/"}, [
           $el('img', {src: "img/logo.png", alt: "Logo"})
         ]),
 
-        $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
+        $el('nav', {className: "bg-$white p-10+30 round all:time-100"}, [
 
           $el('div', {className: "burger flex lg:hide"}, [
-            $el('span')," ", $el('span')," ", $el('span')
+            $el('span'),
+            $el('span'),
+            $el('span')
           ]),
 
           $el('ul', {className: "nav_list", flex: "40", text: "all:$blue semibold"}, [
-            $el('li', null, [Link("index", "Home")]),
-            $el('li', null, [Link("about", "About")]),
-            $el('li', null, [Link("videos", "Videos")]),
-            $el('li', null, [Link("blog", "Blog")]),
+            $el('li', null, [Link("index",   "Home")]),
+            $el('li', null, [Link("about",   "About")]),
+            $el('li', null, [Link("videos",  "Videos")]),
+            $el('li', null, [Link("blog",    "Blog")]),
             $el('li', null, [Link("contact", "Contact")])
           ])
         ])
@@ -120,27 +122,26 @@
   );
 })(),
 
-      $el('div', {className: "hero_section container", flex: "center grow"}, [
-        $el('div', {flex: "40 space m-lg:col-rev"}, [
+      $el('div', {className: "container mt-150 mb-80"}, [
+        $el('div', {className: "hero_section", flex: "40 space ai-s m-lg:col-rev"}, [
 
-          $el('div', {className: "hero_content", flex: "24 col lg:ai-s", text: "m-lg:center"}, [
-            $el('h1', {className: "hero_title font_lilita", text: "50 lg:70 white"}, [
+          $el('div', {className: "hero_content", flex: "20 col lg:ai-s", text: "m-lg:center"}, [
+            $el('h1', {className: "hero_title font_lilita mt-20", text: "50 lg:70 white"}, [
               "Welcome to GlenBob's Toy Learning"
             ]),
 
-            $el('p', {className: "hero_text relative"}, [
+            $el('p', {className: "hero_text"}, [
               "Dive into a world where toys meet education, sparking creativity" + ' ' +
               "and learning in the young minds. Join us as we explore the" + ' ' +
               "adventures of Numberblocks and the magic of counting, all while" + ' ' +
               "incorporating interactive play with Mathlink cubes, magnet" + ' ' +
               "cubes, and more.",
-              $el('br'),
-              $el('br'),
+            $el('br'),$el('br'),
               "Every video is tailored to encourage learning, blending fun with" + ' ' +
               "foundational knowledge essential for Pre-K and kindergarten."
             ]),
 
-            $el('a', {href: "#", className: "h-50"}, [
+            $el('a', {href: "#", className: "h-45"}, [
               (function (prop = {}) {
   ;
 
@@ -160,7 +161,7 @@
 
   return (
     $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
+      "img_children h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -188,7 +189,7 @@
   ;
 
   return (
-    $el('div', {className: "block_promo clouds py-65"}, [
+    $el('div', {className: "block_promo clouds pt-60 pb-70"}, [
       $el('div', {className: "container", flex: "20 lg:55 m-lg:col"}, [
 
         $el('div', {className: "promo_img lg:h-360 shrink-0"}, [
@@ -197,7 +198,7 @@
 
   return (
     $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
+      "img_children h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -205,7 +206,7 @@
 
         $el('div', {className: "promo_divider w-1 bg-white"}),
 
-        $el('div', {className: "promo_text", flex: "35 col ai-s"}, [
+        $el('div', {className: "promo_text", flex: "33 col ai-s"}, [
           $el('a', {href: "#", className: "h-50"}, [
             (function (prop = {}) {
   ;
@@ -219,11 +220,11 @@
 })()
           ]),
 
-          $el('h2', {className: "font_lilita", text: "54 white"}, [
+          $el('h2', {className: "font_lilita spacing-0", text: "54 white"}, [
             "Subscribe to GlenBob's Toy Learning on YouTube"
           ]),
 
-          $el('p', {text: "20 white"}, [
+          $el('p', {text: "18 white"}, [
             "Join us as we explore the adventures of Numberblocks and the magic" + ' ' +
             "of counting"
           ]),

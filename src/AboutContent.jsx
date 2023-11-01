@@ -1,8 +1,8 @@
 (function () {
   return (
-    <div className="about_section pt-35 pb-80 over-hidden">
+    <div className="about_section pt-40 pb-80 over-hidden">
 
-      <div className="container graphics graphics_invert" flex="24 col">
+      <div className="container graphics graphics_invert" flex="30 col">
 
         <h2 className="about_title title_40">
           GlenBob’s Toy Learning

@@ -13,12 +13,22 @@
       border-color: #CED3D9;
       border-radius: 3px;
       resize: vertical;
+      font-size: 14px;
     }
+
+    .inp textarea {
+      height: 100px;
+    }
+    // .inp input + label {
+    //   height: 100%;
+    //   display: flex;
+    //   align-items: center;
+    // }
     .inp label {
       pointer-events: none;
       color: #6F7680;
       position: absolute;
-      top: 14px;
+      top: 16px;
       left: 14px;
       font-size: 14px;
     }
@@ -45,13 +55,13 @@
   return (
     <Html>
       <Header />
-      <main className="bg-#F1F9FD py-50 over-hidden">
+      <main className="lg:bg-#F1F9FD lg:py-50 over-hidden">
         <div className={"container"} flex="center">
           <form action="/send-contact.php" method="POST">
-            <div className="bg-white max-w-480 p-60 graphics" flex="32 col center">
-              <h3 className="font_lilita" text="30 #22A0D9 center">Contact GlenBob</h3>
+            <div className="bg-white max-w-480 p-60 m-lg:px-10 graphics" flex="32 col center">
+              <h3 className="font_lilita sp-0" text="30 #22A0D9 center">Contact GlenBob</h3>
 
-              <div flex="17 col">
+              <div flex="15 col">
                 <div className="inp">
                   <input type="text" placeholder="*" required/>
                   <label>First Name</label>

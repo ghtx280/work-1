@@ -92,22 +92,24 @@
 
   return (
     $el('div', {className: "container"}, [
-      $el('div', {className: "nav_section pt-25", flex: "space"}, [
+      $el('div', {className: "nav_section pt-16", flex: "space"}, [
         $el('a', {href: "/"}, [
           $el('img', {src: "img/logo.png", alt: "Logo"})
         ]),
 
-        $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
+        $el('nav', {className: "bg-$white p-10+30 round all:time-100"}, [
 
           $el('div', {className: "burger flex lg:hide"}, [
-            $el('span')," ", $el('span')," ", $el('span')
+            $el('span'),
+            $el('span'),
+            $el('span')
           ]),
 
           $el('ul', {className: "nav_list", flex: "40", text: "all:$blue semibold"}, [
-            $el('li', null, [Link("index", "Home")]),
-            $el('li', null, [Link("about", "About")]),
-            $el('li', null, [Link("videos", "Videos")]),
-            $el('li', null, [Link("blog", "Blog")]),
+            $el('li', null, [Link("index",   "Home")]),
+            $el('li', null, [Link("about",   "About")]),
+            $el('li', null, [Link("videos",  "Videos")]),
+            $el('li', null, [Link("blog",    "Blog")]),
             $el('li', null, [Link("contact", "Contact")])
           ])
         ])
@@ -116,27 +118,26 @@
   );
 })(),
 
-      $el('div', {className: "hero_section container", flex: "center grow"}, [
-        $el('div', {flex: "40 space m-lg:col-rev"}, [
+      $el('div', {className: "container mt-150 mb-80"}, [
+        $el('div', {className: "hero_section", flex: "40 space ai-s m-lg:col-rev"}, [
 
-          $el('div', {className: "hero_content", flex: "24 col lg:ai-s", text: "m-lg:center"}, [
-            $el('h1', {className: "hero_title font_lilita", text: "50 lg:70 white"}, [
+          $el('div', {className: "hero_content", flex: "20 col lg:ai-s", text: "m-lg:center"}, [
+            $el('h1', {className: "hero_title font_lilita mt-20", text: "50 lg:70 white"}, [
               "Welcome to GlenBob's Toy Learning"
             ]),
 
-            $el('p', {className: "hero_text relative"}, [
+            $el('p', {className: "hero_text"}, [
               "Dive into a world where toys meet education, sparking creativity" + ' ' +
               "and learning in the young minds. Join us as we explore the" + ' ' +
               "adventures of Numberblocks and the magic of counting, all while" + ' ' +
               "incorporating interactive play with Mathlink cubes, magnet" + ' ' +
               "cubes, and more.",
-              $el('br'),
-              $el('br'),
+            $el('br'),$el('br'),
               "Every video is tailored to encourage learning, blending fun with" + ' ' +
               "foundational knowledge essential for Pre-K and kindergarten."
             ]),
 
-            $el('a', {href: "#", className: "h-50"}, [
+            $el('a', {href: "#", className: "h-45"}, [
               (function (prop = {}) {
   ;
 
@@ -156,7 +157,7 @@
 
   return (
     $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
+      "img_children h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -234,10 +235,10 @@
   ;
 
   return (
-    $el('a', {href: "#", className: "card_blog r-16", flex: "col"}, [
+    $el('a', {href: "/blog-post.html", className: "card_blog r-16", flex: "col"}, [
       $el('img', {className: "rt-16 h-230", src: "./img/video.jpg"}),
 
-      $el('p', {className: "rb-16 p-26+32 bg-white", text: "18 $black hover:#109FDA"}, [
+      $el('p', {className: "rb-16 p-26+32 bg-white lh-30px", text: "18 $black hover:#109FDA"}, [
         "Improving staff productivity and turnaround with Digital Dictation and" + ' ' +
         "Outsourced Transcription"
       ])
@@ -250,18 +251,18 @@
   ;
 
   const links = {
-    home: "Home",
-    about: "About Us",
-    video: "Latest Videos",
-    blog: "Latest Blogs",
+    home:    "Home",
+    about:   "About Us",
+    videos:  "Latest Videos",
+    blog:    "Latest Blogs",
     contact: "Contact Us",
-    policy: "Privacy Policy",
-    terms: "Terms of Service",
+    policy:  "Privacy Policy",
+    terms:   "Terms of Service",
   };
 
   function Title(text, cls = "") {
     return (
-      $el('h3', {className: cls + " font_lilita mb-15", text: "20 $black"}, [
+      $el('h3', {className: cls + " font_lilita mb-28 spacing-20", text: "18 $black"}, [
         text
       ])
     );
@@ -269,7 +270,7 @@
 
   return (
       $el('footer', {className: "block_footer clouds py-50"}, [
-        $el('div', {className: "container", flex: "50 lg:130 space ai-s m-lg:col"}, [
+        $el('div', {className: "container", flex: " space ai-s m-lg:col"}, [
 
           $el('div', {className: "info_section", flex: "20 col ai-s"}, [
             $el('div', {className: "h-150"}, [
@@ -278,7 +279,7 @@
 
   return (
     $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
+      "img_children h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -289,7 +290,7 @@
               "consequat diam semper est semper sodales."
             ]),
             $el('a', {href: "#", flex: "10 ai-c"}, [
-              $el('span', {className: "font_lilita", text: "18 white"}, ["Find Us on"]),
+              $el('span', {className: "font_lilita sp-0", text: "18 white"}, ["Find Us on"]),
               (function (prop = {}) {
   ;
 
@@ -299,17 +300,17 @@
       "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/yt.svg", alt: "YouTube"})
   );
-})({h: "30"})
+})({className: "h-30"})
             ])
           ]),
 
-          $el('div', {className: "links_quick_section shrink-0"}, [
+          $el('div', {className: "links_quick_section shrink-0 lg:ml-40 lg:mr-130 m-lg:my-50"}, [
             Title("Quick Links", "links_quick_title"),
 
-            $el('ul', {className: "links_quick_list", flex: "5 col", text: "16"}, [
+            $el('ul', {className: "links_quick_list", flex: "10 col", text: "16"}, [
               Object.entries(links).map(([link, text]) => (
                 $el('li', null, [
-                  $el('a', {className: "links_quick_item", text: "white hover:$yellow 400", href: link}, [
+                  $el('a', {className: "links_quick_item", text: "white hover:$yellow 400", href: link + ".html"}, [
                     text
                   ])
                 ])
@@ -320,10 +321,10 @@
           $el('div', {className: "links_blog_section w-full"}, [
             Title("Latest Blog Feed", "links_blog_title"),
 
-            $el('ul', {className: "links_blog_list", flex: "15 col"}, [
+            $el('ul', {className: "links_blog_list", flex: "20 col"}, [
               times(3).map(() => (
                 $el('li', {className: "links_blog_item", text: "all:white 400"}, [
-                  $el('a', {href: "#", className: "font_lilita mb-5", text: "18 white hover:$yellow"}, [
+                  $el('a', {href: "blog-post.html", className: "font_lilita mb-5 sp-0", text: "18 white hover:$yellow"}, [
                     "Numberblock Even Numbers Missing from step-squad!"
                   ]),
                   $el('p', null, [

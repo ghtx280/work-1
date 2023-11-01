@@ -22,14 +22,18 @@ a {
   color: var(--color-red);
 }
 
-/* body, html {
+html {
   height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-} */
+  min-height: 100%;
+}
+main {
+  flex-grow: 1;
+}
 
 body {
   color: var(--color-black);
@@ -41,6 +45,8 @@ body {
 
 .font_lilita {
   font-family: var(--font-lilita);
+  letter-spacing: 2px;
+  line-height: 1.1;
 }
 
 .title_40, .title_48 {
@@ -71,7 +77,7 @@ body {
 
 
 .btn {
-  padding: 12px 24px;
+  padding: 14px 25px;
   border-radius: 999px;
   font-family: var(--font-lilita);
   font-size: 18px;
@@ -81,6 +87,7 @@ body {
   width: fit-content;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   transition: all 200ms;
+  cursor: pointer;
 }
 
 .btn_yellow {
@@ -89,17 +96,21 @@ body {
 }
 .btn_yellow:hover {
   color: var(--color-yellow);
+  outline: 1px solid var(--color-yellow);
   background: #fff;
 }
 
 .btn_pink {
   background: var(--color-pink);
   color: #fff;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .btn_pink:hover {
-  /* color: var(--color-pink);
-  background: #fff; */
-  filter: brightness(80%);
+  color: var(--color-pink);
+  outline: 1px solid var(--color-pink);
+  background: #fff;
+  /* filter: brightness(80%); */
 }
 
 .btn_green {
@@ -112,7 +123,9 @@ body {
 }
 
 .btn_green:hover {
-  background: #1b8d5a;
+  color: #1b8d5a;
+  outline: 1px solid #1b8d5a;
+  background: #fff;
 }
 
 
@@ -141,8 +154,25 @@ header, .clouds {
   background-size: 140% 300%;
 }
 
+
+.spacing-0, .sp-0 {
+  letter-spacing: 0;
+}
+
+@media (max-width: 992px) {
+  .title_40 {
+    font-size: 34px;
+  }
+  
+  .title_48 {
+    font-size: 40px;
+  }
+
+}
+
 @media (min-width: 992px) {
 
+  
   .graphics {
     --distanse: 20%;
     position: relative;
@@ -171,14 +201,16 @@ header, .clouds {
   }
 
   .graphics::before { 
-    left: 0;
+    top: 10px;
+    left: -20px;
     transform: translateX(calc(-100% - var(--distanse)));
     background-image: url(../img/LeftGraphicsLong.svg);
     background-position: right top;
   }
   
   .graphics::after   {
-    left: 100%;
+    top: 45px;
+    left: 99%;
     transform: translateX(var(--distanse));
     background-image: url(../img/RightGraphicsLong.svg);
     background-position: left top;

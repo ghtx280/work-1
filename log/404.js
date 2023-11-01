@@ -96,22 +96,24 @@
 
   return (
     $el('div', {className: "container"}, [
-      $el('div', {className: "nav_section pt-25", flex: "space"}, [
+      $el('div', {className: "nav_section pt-16", flex: "space"}, [
         $el('a', {href: "/"}, [
           $el('img', {src: "img/logo.png", alt: "Logo"})
         ]),
 
-        $el('nav', {className: "bg-$white p-15+30 round all:time-100"}, [
+        $el('nav', {className: "bg-$white p-10+30 round all:time-100"}, [
 
           $el('div', {className: "burger flex lg:hide"}, [
-            $el('span')," ", $el('span')," ", $el('span')
+            $el('span'),
+            $el('span'),
+            $el('span')
           ]),
 
           $el('ul', {className: "nav_list", flex: "40", text: "all:$blue semibold"}, [
-            $el('li', null, [Link("index", "Home")]),
-            $el('li', null, [Link("about", "About")]),
-            $el('li', null, [Link("videos", "Videos")]),
-            $el('li', null, [Link("blog", "Blog")]),
+            $el('li', null, [Link("index",   "Home")]),
+            $el('li', null, [Link("about",   "About")]),
+            $el('li', null, [Link("videos",  "Videos")]),
+            $el('li', null, [Link("blog",    "Blog")]),
             $el('li', null, [Link("contact", "Contact")])
           ])
         ])
@@ -120,27 +122,26 @@
   );
 })(),
 
-      $el('div', {className: "hero_section container", flex: "center grow"}, [
-        $el('div', {flex: "40 space m-lg:col-rev"}, [
+      $el('div', {className: "container mt-150 mb-80"}, [
+        $el('div', {className: "hero_section", flex: "40 space ai-s m-lg:col-rev"}, [
 
-          $el('div', {className: "hero_content", flex: "24 col lg:ai-s", text: "m-lg:center"}, [
-            $el('h1', {className: "hero_title font_lilita", text: "50 lg:70 white"}, [
+          $el('div', {className: "hero_content", flex: "20 col lg:ai-s", text: "m-lg:center"}, [
+            $el('h1', {className: "hero_title font_lilita mt-20", text: "50 lg:70 white"}, [
               "Welcome to GlenBob's Toy Learning"
             ]),
 
-            $el('p', {className: "hero_text relative"}, [
+            $el('p', {className: "hero_text"}, [
               "Dive into a world where toys meet education, sparking creativity" + ' ' +
               "and learning in the young minds. Join us as we explore the" + ' ' +
               "adventures of Numberblocks and the magic of counting, all while" + ' ' +
               "incorporating interactive play with Mathlink cubes, magnet" + ' ' +
               "cubes, and more.",
-              $el('br'),
-              $el('br'),
+            $el('br'),$el('br'),
               "Every video is tailored to encourage learning, blending fun with" + ' ' +
               "foundational knowledge essential for Pre-K and kindergarten."
             ]),
 
-            $el('a', {href: "#", className: "h-50"}, [
+            $el('a', {href: "#", className: "h-45"}, [
               (function (prop = {}) {
   ;
 
@@ -160,7 +161,7 @@
 
   return (
     $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
+      "img_children h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
@@ -171,11 +172,11 @@
     ])
   );
 })(),
-      $el('main', {className: "bg-#F1F9FD py-70 over-hidden"}, [
+      $el('main', {className: "bg-#F1F9FD py-90 over-hidden"}, [
         $el('div', {className: "container graphics"}, [
-          $el('div', {flex: "48 col center"}, [
+          $el('div', {flex: " col center"}, [
             $el('div', {flex: "16 col"}, [
-              $el('h2', {className: "title_48 mb-24"}, ["Ooops!"]),
+              $el('h2', {className: "title_48"}, ["Ooops!"]),
               $el('p', {text: "24 regular center"}, [
                 "The page you're looking for does not exist."
               ])
@@ -196,27 +197,48 @@
       (function () {
   ;
 
-  return (
-    $el('div', {className: "block_promo clouds py-65"}, [
-      $el('div', {className: "container", flex: "20 lg:55 m-lg:col"}, [
+  const links = {
+    home:    "Home",
+    about:   "About Us",
+    videos:  "Latest Videos",
+    blog:    "Latest Blogs",
+    contact: "Contact Us",
+    policy:  "Privacy Policy",
+    terms:   "Terms of Service",
+  };
 
-        $el('div', {className: "promo_img lg:h-360 shrink-0"}, [
-          (function (prop = {}) {
+  function Title(text, cls = "") {
+    return (
+      $el('h3', {className: cls + " font_lilita mb-28 spacing-20", text: "18 $black"}, [
+        text
+      ])
+    );
+  }
+
+  return (
+      $el('footer', {className: "block_footer clouds py-50"}, [
+        $el('div', {className: "container", flex: " space ai-s m-lg:col"}, [
+
+          $el('div', {className: "info_section", flex: "20 col ai-s"}, [
+            $el('div', {className: "h-150"}, [
+              (function (prop = {}) {
   ;
 
   return (
     $el('img', {className:
-      "h-full " + (prop.className ? " " + prop.className : ""),
+      "img_children h-full " + (prop.className ? " " + prop.className : ""),
     src: "./img/hero.png", alt: "Hero image"})
   );
 })()
-        ]),
+            ]),
 
-        $el('div', {className: "promo_divider w-1 bg-white"}),
-
-        $el('div', {className: "promo_text", flex: "35 col ai-s"}, [
-          $el('a', {href: "#", className: "h-50"}, [
-            (function (prop = {}) {
+            $el('p', {text: "white"}, [
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam" + ' ' +
+              "consequat diam semper est semper sodales."
+            ]),
+            $el('a', {href: "#", flex: "10 ai-c"}, [
+              $el('span', {className: "font_lilita sp-0", text: "18 white"}, ["Find Us on"]),
+              (function (prop = {}) {
   ;
 
 
@@ -225,25 +247,43 @@
       "h-full" + (prop.className ? " " + prop.className : ""),
     src: "./img/yt.svg", alt: "YouTube"})
   );
-})()
+})({className: "h-30"})
+            ])
           ]),
 
-          $el('h2', {className: "font_lilita", text: "54 white"}, [
-            "Subscribe to GlenBob's Toy Learning on YouTube"
+          $el('div', {className: "links_quick_section shrink-0 lg:ml-40 lg:mr-130 m-lg:my-50"}, [
+            Title("Quick Links", "links_quick_title"),
+
+            $el('ul', {className: "links_quick_list", flex: "10 col", text: "16"}, [
+              Object.entries(links).map(([link, text]) => (
+                $el('li', null, [
+                  $el('a', {className: "links_quick_item", text: "white hover:$yellow 400", href: link + ".html"}, [
+                    text
+                  ])
+                ])
+              ))
+            ])
           ]),
 
-          $el('p', {text: "20 white"}, [
-            "Join us as we explore the adventures of Numberblocks and the magic" + ' ' +
-            "of counting"
-          ]),
+          $el('div', {className: "links_blog_section w-full"}, [
+            Title("Latest Blog Feed", "links_blog_title"),
 
-          $el('a', {href: "#", className: "btn btn_yellow"}, [
-            "Subscribe Today"
+            $el('ul', {className: "links_blog_list", flex: "20 col"}, [
+              times(3).map(() => (
+                $el('li', {className: "links_blog_item", text: "all:white 400"}, [
+                  $el('a', {href: "blog-post.html", className: "font_lilita mb-5 sp-0", text: "18 white hover:$yellow"}, [
+                    "Numberblock Even Numbers Missing from step-squad!"
+                  ]),
+                  $el('p', null, [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit." + ' ' +
+                    "Donec ornare, felis vel tempor vestibulum..."
+                  ])
+                ])
+              ))
+            ])
           ])
         ])
-
       ])
-    ])
   );
 })(),
       (function () {

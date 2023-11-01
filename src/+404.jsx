@@ -43,11 +43,11 @@
   return (
     <Html>
       <Header />
-      <main className="bg-#F1F9FD py-70 over-hidden">
+      <main className="bg-#F1F9FD py-90 over-hidden">
         <div className={"container graphics"}>
-          <div flex="48 col center">
+          <div flex=" col center">
             <div flex="16 col">
-              <h2 className="title_48 mb-24">Ooops!</h2>
+              <h2 className="title_48">Ooops!</h2>
               <p text="24 regular center">
                 The page you're looking for does not exist.
               </p>
@@ -65,7 +65,7 @@
           </div>
         </div>
       </main>
-      <Promo />
+      <Footer />
       <Copy />
     </Html>
   );

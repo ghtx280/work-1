@@ -13,6 +13,8 @@
     gap: 3.2px;
 
     z-index: 99;
+
+    cursor: pointer;
   }
   
   .burger span {
@@ -49,6 +51,7 @@
       justify-content: center;
       align-items: center;
       font-size: 18px;
+      z-index: 9;
     }
   }
   
@@ -69,22 +72,24 @@
 
   return (
     <div className="container">
-      <div className="nav_section pt-25" flex="space">
+      <div className="nav_section pt-16" flex="space">
         <a href="/">
           <img src="img/logo.png" alt="Logo" />
         </a>
 
-        <nav className="bg-$white p-15+30 round all:time-100">
+        <nav className="bg-$white p-10+30 round all:time-100">
 
           <div className="burger flex lg:hide">
-            <span /> <span /> <span />
+            <span />
+            <span />
+            <span />
           </div>
 
           <ul className="nav_list" flex="40" text="all:$blue semibold">
-            <li>{Link("index", "Home")}</li>
-            <li>{Link("about", "About")}</li>
-            <li>{Link("videos", "Videos")}</li>
-            <li>{Link("blog", "Blog")}</li>
+            <li>{Link("index",   "Home")}</li>
+            <li>{Link("about",   "About")}</li>
+            <li>{Link("videos",  "Videos")}</li>
+            <li>{Link("blog",    "Blog")}</li>
             <li>{Link("contact", "Contact")}</li>
           </ul>
         </nav>

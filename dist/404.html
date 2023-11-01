@@ -59,11 +59,11 @@
 <body>
     <header class="block_header w-full h-full pb-30" flex="col">
         <div class="container">
-            <div class="nav_section pt-25" flex="space">
+            <div class="nav_section pt-16" flex="space">
                 <a href="/">
                     <img src="img/logo.png" alt="Logo" />
                 </a>
-                <nav class="bg-$white p-15+30 round all:time-100">
+                <nav class="bg-$white p-10+30 round all:time-100">
                     <div class="burger flex lg:hide">
                         <span></span>
                         <span></span>
@@ -89,30 +89,30 @@
                 </nav>
             </div>
         </div>
-        <div class="hero_section container" flex="center grow">
-            <div flex="40 space m-lg:col-rev">
-                <div class="hero_content" flex="24 col lg:ai-s" text="m-lg:center">
-                    <h1 class="hero_title font_lilita" text="50 lg:70 white">Welcome to GlenBob's Toy Learning</h1>
-                    <p class="hero_text relative">Dive into a world where toys meet education, sparking creativity and learning in the young minds. Join us as we explore the adventures of Numberblocks and the magic of counting, all while incorporating interactive play with Mathlink cubes, magnet cubes, and more.
+        <div class="container mt-150 mb-80">
+            <div class="hero_section" flex="40 space ai-s m-lg:col-rev">
+                <div class="hero_content" flex="20 col lg:ai-s" text="m-lg:center">
+                    <h1 class="hero_title font_lilita mt-20" text="50 lg:70 white">Welcome to GlenBob's Toy Learning</h1>
+                    <p class="hero_text">Dive into a world where toys meet education, sparking creativity and learning in the young minds. Join us as we explore the adventures of Numberblocks and the magic of counting, all while incorporating interactive play with Mathlink cubes, magnet cubes, and more.
                         <br />
                         <br />
                         Every video is tailored to encourage learning, blending fun with foundational knowledge essential for Pre-K and kindergarten.
                     </p>
-                    <a href="#" class="h-50">
+                    <a href="#" class="h-45">
                         <img class="h-full" src="./img/yt.svg" alt="YouTube" />
                     </a>
                 </div>
                 <div class="hero_image shrink-0 m-lg:h-200">
-                    <img class="h-full" src="./img/hero.png" alt="Hero image" />
+                    <img class="img_children h-full" src="./img/hero.png" alt="Hero image" />
                 </div>
             </div>
         </div>
     </header>
-    <main class="bg-#F1F9FD py-70 over-hidden">
+    <main class="bg-#F1F9FD py-90 over-hidden">
         <div class="container graphics">
-            <div flex="48 col center">
+            <div flex="col center">
                 <div flex="16 col">
-                    <h2 class="title_48 mb-24">Ooops!</h2>
+                    <h2 class="title_48">Ooops!</h2>
                     <p text="24 regular center">The page you're looking for does not exist.</p>
                 </div>
                 <div flex="16 col">
@@ -126,22 +126,63 @@
             </div>
         </div>
     </main>
-    <div class="block_promo clouds py-65">
-        <div class="container" flex="20 lg:55 m-lg:col">
-            <div class="promo_img lg:h-360 shrink-0">
-                <img class="h-full" src="./img/hero.png" alt="Hero image" />
-            </div>
-            <div class="promo_divider w-1 bg-white"></div>
-            <div class="promo_text" flex="35 col ai-s">
-                <a href="#" class="h-50">
-                    <img class="h-full" src="./img/yt.svg" alt="YouTube" />
+    <footer class="block_footer clouds py-50">
+        <div class="container" flex="space ai-s m-lg:col">
+            <div class="info_section" flex="20 col ai-s">
+                <div class="h-150">
+                    <img class="img_children h-full" src="./img/hero.png" alt="Hero image" />
+                </div>
+                <p text="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat diam semper est semper sodales.</p>
+                <a href="#" flex="10 ai-c">
+                    <span class="font_lilita sp-0" text="18 white">Find Us on</span>
+                    <img class="h-full h-30" src="./img/yt.svg" alt="YouTube" />
                 </a>
-                <h2 class="font_lilita" text="54 white">Subscribe to GlenBob's Toy Learning on YouTube</h2>
-                <p text="20 white">Join us as we explore the adventures of Numberblocks and the magic of counting</p>
-                <a href="#" class="btn btn_yellow">Subscribe Today</a>
+            </div>
+            <div class="links_quick_section shrink-0 lg:ml-40 lg:mr-130 m-lg:my-50">
+                <h3 class="links_quick_title font_lilita mb-28 spacing-20" text="18 $black">Quick Links</h3>
+                <ul class="links_quick_list" flex="10 col" text="16">
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="videos.html">Latest Videos</a>
+                    </li>
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="blog.html">Latest Blogs</a>
+                    </li>
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="policy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a class="links_quick_item" text="white hover:$yellow 400" href="terms.html">Terms of Service</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links_blog_section w-full">
+                <h3 class="links_blog_title font_lilita mb-28 spacing-20" text="18 $black">Latest Blog Feed</h3>
+                <ul class="links_blog_list" flex="20 col">
+                    <li class="links_blog_item" text="all:white 400">
+                        <a href="blog-post.html" class="font_lilita mb-5 sp-0" text="18 white hover:$yellow">Numberblock Even Numbers Missing from step-squad!</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, felis vel tempor vestibulum...</p>
+                    </li>
+                    <li class="links_blog_item" text="all:white 400">
+                        <a href="blog-post.html" class="font_lilita mb-5 sp-0" text="18 white hover:$yellow">Numberblock Even Numbers Missing from step-squad!</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, felis vel tempor vestibulum...</p>
+                    </li>
+                    <li class="links_blog_item" text="all:white 400">
+                        <a href="blog-post.html" class="font_lilita mb-5 sp-0" text="18 white hover:$yellow">Numberblock Even Numbers Missing from step-squad!</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, felis vel tempor vestibulum...</p>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </footer>
     <div class="block_copyright bg-$yellow h-50" flex="center">
         <p class="copyright_text" text="14 light">© GlenBob's Toy Learning</p>
     </div>
